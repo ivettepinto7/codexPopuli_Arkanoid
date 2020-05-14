@@ -1,0 +1,9 @@
+C:\Users\ivett\Desktop\CloneProyectoPoo\codexPopuli_Arkanoid\codexPopuli_Arkanoid\bin\Debug\codexPopuli_Arkanoid.exe.config
+C:\Users\ivett\Desktop\CloneProyectoPoo\codexPopuli_Arkanoid\codexPopuli_Arkanoid\bin\Debug\codexPopuli_Arkanoid.exe
+C:\Users\ivett\Desktop\CloneProyectoPoo\codexPopuli_Arkanoid\codexPopuli_Arkanoid\bin\Debug\codexPopuli_Arkanoid.pdb
+C:\Users\ivett\Desktop\CloneProyectoPoo\codexPopuli_Arkanoid\codexPopuli_Arkanoid\obj\Debug\codexPopuli_Arkanoid.csprojAssemblyReference.cache
+C:\Users\ivett\Desktop\CloneProyectoPoo\codexPopuli_Arkanoid\codexPopuli_Arkanoid\obj\Debug\codexPopuli_Arkanoid.Properties.Resources.resources
+C:\Users\ivett\Desktop\CloneProyectoPoo\codexPopuli_Arkanoid\codexPopuli_Arkanoid\obj\Debug\codexPopuli_Arkanoid.csproj.GenerateResource.cache
+C:\Users\ivett\Desktop\CloneProyectoPoo\codexPopuli_Arkanoid\codexPopuli_Arkanoid\obj\Debug\codexPopuli_Arkanoid.csproj.CoreCompileInputs.cache
+C:\Users\ivett\Desktop\CloneProyectoPoo\codexPopuli_Arkanoid\codexPopuli_Arkanoid\obj\Debug\codexPopuli_Arkanoid.exe
+C:\Users\ivett\Desktop\CloneProyectoPoo\codexPopuli_Arkanoid\codexPopuli_Arkanoid\obj\Debug\codexPopuli_Arkanoid.pdb
