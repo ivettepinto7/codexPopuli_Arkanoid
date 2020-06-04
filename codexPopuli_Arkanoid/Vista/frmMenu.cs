@@ -7,21 +7,33 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
+using codexPopuli_Arkanoid.Properties;
 
 namespace codexPopuli_Arkanoid
 {
     public partial class Form1 : Form
     {
+        private SoundPlayer sound;
         public Form1()
         {
             InitializeComponent();
+            sound = new SoundPlayer();
+            sound.SoundLocation = "C:/Users/ivett/Desktop/CloneProyectoPoo/codexPopuli_Arkanoid/codexPopuli_Arkanoid/Resoruces/MenuSong.wav";
         }
 
         private void bttnPlay_Click(object sender, EventArgs e)
         {
             frmPlayer Player = new frmPlayer();
-            Hide();
-            Player.Show();
+            this.Hide();
+            Player.ShowDialog();
+        }
+        
+        private void bttnScores_Click(object sender, EventArgs e)
+        {
+            sound.Stop();
+            frmTop10 top = new frmTop10();
+            top.Show();
         }
         
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
@@ -43,10 +55,20 @@ namespace codexPopuli_Arkanoid
             Application.Exit();
         }
 
-        private void bttnScores_Click(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
-            frmTop10 top = new frmTop10();
-            top.Show();
+            sound.PlayLooping();
+        }
+
+        private void bttnSoundOn_Click(object sender, EventArgs e)
+        {
+            sound.Play();
+            sound.PlayLooping();
+        }
+
+        private void bttnSoundOf_Click(object sender, EventArgs e)
+        {
+            sound.Stop();
         }
     }
 }

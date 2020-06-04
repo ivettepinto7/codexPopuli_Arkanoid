@@ -34,7 +34,11 @@
             this.bttnPlay = new System.Windows.Forms.Button();
             this.bttnScores = new System.Windows.Forms.Button();
             this.bttnExit = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.bttnSoundOf = new System.Windows.Forms.Button();
+            this.bttnSoundOn = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -48,6 +52,7 @@
             this.tableLayoutPanel1.Controls.Add(this.bttnPlay, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.bttnScores, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.bttnExit, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.groupBox1, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -107,6 +112,42 @@
             this.bttnExit.UseVisualStyleBackColor = false;
             this.bttnExit.Click += new System.EventHandler(this.bttnExit_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.bttnSoundOf);
+            this.groupBox1.Controls.Add(this.bttnSoundOn);
+            this.groupBox1.ForeColor = System.Drawing.Color.White;
+            this.groupBox1.Location = new System.Drawing.Point(3, 3);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(121, 52);
+            this.groupBox1.TabIndex = 3;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Sound";
+            // 
+            // bttnSoundOf
+            // 
+            this.bttnSoundOf.Font = new System.Drawing.Font("AR DARLING", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.bttnSoundOf.ForeColor = System.Drawing.Color.Black;
+            this.bttnSoundOf.Location = new System.Drawing.Point(63, 16);
+            this.bttnSoundOf.Name = "bttnSoundOf";
+            this.bttnSoundOf.Size = new System.Drawing.Size(52, 30);
+            this.bttnSoundOf.TabIndex = 1;
+            this.bttnSoundOf.Text = "OFF";
+            this.bttnSoundOf.UseVisualStyleBackColor = true;
+            this.bttnSoundOf.Click += new System.EventHandler(this.bttnSoundOf_Click);
+            // 
+            // bttnSoundOn
+            // 
+            this.bttnSoundOn.Font = new System.Drawing.Font("AR DARLING", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.bttnSoundOn.ForeColor = System.Drawing.Color.Black;
+            this.bttnSoundOn.Location = new System.Drawing.Point(6, 16);
+            this.bttnSoundOn.Name = "bttnSoundOn";
+            this.bttnSoundOn.Size = new System.Drawing.Size(51, 30);
+            this.bttnSoundOn.TabIndex = 0;
+            this.bttnSoundOn.Text = "ON";
+            this.bttnSoundOn.UseVisualStyleBackColor = true;
+            this.bttnSoundOn.Click += new System.EventHandler(this.bttnSoundOn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -124,13 +165,18 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
         }
 
         private System.Windows.Forms.Button bttnExit;
         private System.Windows.Forms.Button bttnPlay;
         private System.Windows.Forms.Button bttnScores;
+        private System.Windows.Forms.Button bttnSoundOf;
+        private System.Windows.Forms.Button bttnSoundOn;
+        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
 
         #endregion
