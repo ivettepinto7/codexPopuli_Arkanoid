@@ -42,5 +42,11 @@ namespace codexPopuli_Arkanoid
         {
             Application.Exit();
         }
+
+        private void bttnScores_Click(object sender, EventArgs e)
+        {
+            frmTop10 top = new frmTop10();
+            top.Show();
+        }
     }
 }

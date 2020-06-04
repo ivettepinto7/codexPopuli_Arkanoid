@@ -33,3 +33,4 @@ C:\Users\ivett\Desktop\CloneProyectoPoo\codexPopuli_Arkanoid\codexPopuli_Arkanoi
 C:\Users\ivett\Desktop\CloneProyectoPoo\codexPopuli_Arkanoid\codexPopuli_Arkanoid\obj\Debug\codexPopuli_Arkanoid.csproj.CopyComplete
 C:\Users\ivett\Desktop\CloneProyectoPoo\codexPopuli_Arkanoid\codexPopuli_Arkanoid\obj\Debug\codexPopuli_Arkanoid.frmPlayer.resources
 C:\Users\ivett\Desktop\CloneProyectoPoo\codexPopuli_Arkanoid\codexPopuli_Arkanoid\obj\Debug\codexPopuli_Arkanoid.frmGame.resources
+C:\Users\ivett\Desktop\CloneProyectoPoo\codexPopuli_Arkanoid\codexPopuli_Arkanoid\obj\Debug\codexPopuli_Arkanoid.frmTop10.resources

@@ -61,15 +61,15 @@
             // 
             // bttnPlay
             // 
-            this.bttnPlay.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bttnPlay.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bttnPlay.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.bttnPlay.BackColor = System.Drawing.Color.CadetBlue;
+            this.bttnPlay.BackColor = System.Drawing.Color.White;
             this.bttnPlay.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.bttnPlay.Font = new System.Drawing.Font("AR DARLING", 32.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.bttnPlay.ForeColor = System.Drawing.Color.White;
-            this.bttnPlay.Location = new System.Drawing.Point(273, 193);
+            this.bttnPlay.ForeColor = System.Drawing.Color.Black;
+            this.bttnPlay.Location = new System.Drawing.Point(273, 187);
             this.bttnPlay.Name = "bttnPlay";
-            this.bttnPlay.Size = new System.Drawing.Size(252, 74);
+            this.bttnPlay.Size = new System.Drawing.Size(252, 72);
             this.bttnPlay.TabIndex = 0;
             this.bttnPlay.Text = "JUGAR";
             this.bttnPlay.UseVisualStyleBackColor = false;
@@ -77,28 +77,29 @@
             // 
             // bttnScores
             // 
-            this.bttnScores.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bttnScores.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bttnScores.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.bttnScores.BackColor = System.Drawing.Color.CadetBlue;
+            this.bttnScores.BackColor = System.Drawing.Color.White;
             this.bttnScores.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.bttnScores.Font = new System.Drawing.Font("AR DARLING", 32.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.bttnScores.ForeColor = System.Drawing.Color.White;
-            this.bttnScores.Location = new System.Drawing.Point(269, 287);
+            this.bttnScores.ForeColor = System.Drawing.Color.Black;
+            this.bttnScores.Location = new System.Drawing.Point(269, 279);
             this.bttnScores.Name = "bttnScores";
-            this.bttnScores.Size = new System.Drawing.Size(260, 70);
+            this.bttnScores.Size = new System.Drawing.Size(260, 71);
             this.bttnScores.TabIndex = 1;
             this.bttnScores.Text = "PUNTAJES";
             this.bttnScores.UseVisualStyleBackColor = false;
+            this.bttnScores.Click += new System.EventHandler(this.bttnScores_Click);
             // 
             // bttnExit
             // 
-            this.bttnExit.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bttnExit.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bttnExit.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.bttnExit.BackColor = System.Drawing.Color.CadetBlue;
+            this.bttnExit.BackColor = System.Drawing.Color.White;
             this.bttnExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.bttnExit.Font = new System.Drawing.Font("AR DARLING", 32.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.bttnExit.ForeColor = System.Drawing.Color.White;
-            this.bttnExit.Location = new System.Drawing.Point(272, 384);
+            this.bttnExit.ForeColor = System.Drawing.Color.Red;
+            this.bttnExit.Location = new System.Drawing.Point(272, 371);
             this.bttnExit.Name = "bttnExit";
             this.bttnExit.Size = new System.Drawing.Size(254, 60);
             this.bttnExit.TabIndex = 2;
