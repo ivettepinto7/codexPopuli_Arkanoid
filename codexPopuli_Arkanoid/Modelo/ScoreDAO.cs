@@ -22,6 +22,23 @@ namespace codexPopuli_Arkanoid.Modelo
             }
 
             return scores;
-        } 
+        }
+
+        public static void UpdatePlayerScore(int nscore, string nickname)
+        {
+            try
+            {
+                string sql = string.Format(
+                    "UPDATE public.score SET score={0}	WHERE nickname='{1}';",
+                    nscore, nickname);
+                
+                ConnectionDB.ExecuteNonQuery(sql);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+        }
     }
 }
