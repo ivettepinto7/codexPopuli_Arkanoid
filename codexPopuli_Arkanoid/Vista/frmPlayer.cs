@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Media;
 using System.Windows.Forms;
 using codexPopuli_Arkanoid.Modelo;
 
@@ -6,10 +7,13 @@ namespace codexPopuli_Arkanoid
 {
     public partial class frmPlayer : Form
     {
+        private SoundPlayer sound;
         public frmPlayer()
         {
             InitializeComponent();
-        }
+            sound = new SoundPlayer();
+            sound.SoundLocation = "C:/Users/ivett/Desktop/CloneProyectoPoo/codexPopuli_Arkanoid/codexPopuli_Arkanoid/Resoruces/MenuSong.wav";
+        }                    
         
         private void bttnPlay_Click(object sender, EventArgs e)
         {
@@ -32,10 +36,12 @@ namespace codexPopuli_Arkanoid
             }
             catch (Exception exception)
             {
-                MessageBox.Show("El usuario no existe");
+                MessageBox.Show("Ha ocurrido un error", 
+                    "Arkanoid", MessageBoxButtons.OK);
             }
         }
-        
+
+
         private void bttnAddPlayer_Click(object sender, EventArgs e)
         {
             if (txtNickname.Text.Length >= 5)
@@ -46,8 +52,18 @@ namespace codexPopuli_Arkanoid
                 MessageBox.Show(
                     "Ha ocurrido un error");
         }
+
+        private void bttnSoundOn_Click(object sender, EventArgs e)
+        {
+            sound.PlayLooping();
+        }
+
+        private void bttnSoundOff_Click(object sender, EventArgs e)
+        {
+            sound.Stop();
+        }
         
-        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        private void frmPlayer_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (MessageBox.Show("¿Seguro que desea salir?", 
                 "Arkanoid", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
@@ -56,7 +72,7 @@ namespace codexPopuli_Arkanoid
             }
         }
 
-        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        private void frmPlayer_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
         }

@@ -31,10 +31,11 @@ namespace codexPopuli_Arkanoid
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTop10));
             this.label1 = new System.Windows.Forms.Label();
             this.dgvScoresTop10 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.bttnSoundOf = new System.Windows.Forms.Button();
+            this.bttnSoundOff = new System.Windows.Forms.Button();
             this.bttnSoundOn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize) (this.dgvScoresTop10)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -54,7 +55,7 @@ namespace codexPopuli_Arkanoid
             // 
             // dgvScoresTop10
             // 
-            this.dgvScoresTop10.BackgroundColor = System.Drawing.Color.Red;
+            this.dgvScoresTop10.BackgroundColor = System.Drawing.Color.CadetBlue;
             this.dgvScoresTop10.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvScoresTop10.Location = new System.Drawing.Point(85, 117);
             this.dgvScoresTop10.Name = "dgvScoresTop10";
@@ -63,27 +64,28 @@ namespace codexPopuli_Arkanoid
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.bttnSoundOf);
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.bttnSoundOff);
             this.groupBox1.Controls.Add(this.bttnSoundOn);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(12, -2);
+            this.groupBox1.Location = new System.Drawing.Point(2, 1);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(121, 52);
+            this.groupBox1.Size = new System.Drawing.Size(115, 50);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Sound";
             // 
-            // bttnSoundOf
+            // bttnSoundOff
             // 
-            this.bttnSoundOf.Font = new System.Drawing.Font("AR DARLING", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.bttnSoundOf.ForeColor = System.Drawing.Color.Black;
-            this.bttnSoundOf.Location = new System.Drawing.Point(63, 16);
-            this.bttnSoundOf.Name = "bttnSoundOf";
-            this.bttnSoundOf.Size = new System.Drawing.Size(52, 30);
-            this.bttnSoundOf.TabIndex = 1;
-            this.bttnSoundOf.Text = "OFF";
-            this.bttnSoundOf.UseVisualStyleBackColor = true;
-            this.bttnSoundOf.Click += new System.EventHandler(this.bttnSoundOf_Click);
+            this.bttnSoundOff.Font = new System.Drawing.Font("AR DARLING", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.bttnSoundOff.ForeColor = System.Drawing.Color.Black;
+            this.bttnSoundOff.Location = new System.Drawing.Point(63, 16);
+            this.bttnSoundOff.Name = "bttnSoundOff";
+            this.bttnSoundOff.Size = new System.Drawing.Size(52, 30);
+            this.bttnSoundOff.TabIndex = 1;
+            this.bttnSoundOff.Text = "OFF";
+            this.bttnSoundOff.UseVisualStyleBackColor = true;
+            this.bttnSoundOff.Click += new System.EventHandler(this.bttnSoundOf_Click);
             // 
             // bttnSoundOn
             // 
@@ -102,11 +104,13 @@ namespace codexPopuli_Arkanoid
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Red;
+            this.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(407, 428);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgvScoresTop10);
             this.Controls.Add(this.label1);
+            this.DoubleBuffered = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmTop10";
@@ -117,7 +121,7 @@ namespace codexPopuli_Arkanoid
             this.ResumeLayout(false);
         }
 
-        private System.Windows.Forms.Button bttnSoundOf;
+        private System.Windows.Forms.Button bttnSoundOff;
         private System.Windows.Forms.Button bttnSoundOn;
         private System.Windows.Forms.DataGridView dgvScoresTop10;
         private System.Windows.Forms.GroupBox groupBox1;
