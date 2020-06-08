@@ -18,6 +18,9 @@ namespace codexPopuli_Arkanoid
         public Form1()
         {
             InitializeComponent();
+            Height = ClientSize.Height;
+            Width = ClientSize.Width;
+            WindowState = FormWindowState.Maximized;
             sound = new SoundPlayer();
             sound.SoundLocation = "C:/Users/ivett/Desktop/CloneProyectoPoo/codexPopuli_Arkanoid/codexPopuli_Arkanoid/Resoruces/MenuSong.wav";
         }
@@ -58,6 +61,7 @@ namespace codexPopuli_Arkanoid
         private void Form1_Load(object sender, EventArgs e)
         {
             sound.PlayLooping();
+            
         }
 
         private void bttnSoundOn_Click(object sender, EventArgs e)

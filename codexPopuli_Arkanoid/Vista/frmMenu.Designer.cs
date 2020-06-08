@@ -70,7 +70,7 @@
             this.bttnPlay.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.bttnPlay.BackColor = System.Drawing.Color.White;
             this.bttnPlay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bttnPlay.Font = new System.Drawing.Font("AR DARLING", 32.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.bttnPlay.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.bttnPlay.ForeColor = System.Drawing.Color.Black;
             this.bttnPlay.Location = new System.Drawing.Point(273, 187);
             this.bttnPlay.Name = "bttnPlay";
@@ -86,7 +86,7 @@
             this.bttnScores.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.bttnScores.BackColor = System.Drawing.Color.White;
             this.bttnScores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bttnScores.Font = new System.Drawing.Font("AR DARLING", 32.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.bttnScores.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.bttnScores.ForeColor = System.Drawing.Color.Black;
             this.bttnScores.Location = new System.Drawing.Point(269, 279);
             this.bttnScores.Name = "bttnScores";
@@ -102,7 +102,7 @@
             this.bttnExit.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.bttnExit.BackColor = System.Drawing.Color.White;
             this.bttnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bttnExit.Font = new System.Drawing.Font("AR DARLING", 32.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.bttnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.bttnExit.ForeColor = System.Drawing.Color.Red;
             this.bttnExit.Location = new System.Drawing.Point(272, 371);
             this.bttnExit.Name = "bttnExit";
@@ -126,7 +126,7 @@
             // 
             // bttnSoundOf
             // 
-            this.bttnSoundOf.Font = new System.Drawing.Font("AR DARLING", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.bttnSoundOf.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.bttnSoundOf.ForeColor = System.Drawing.Color.Black;
             this.bttnSoundOf.Location = new System.Drawing.Point(63, 16);
             this.bttnSoundOf.Name = "bttnSoundOf";
@@ -138,7 +138,7 @@
             // 
             // bttnSoundOn
             // 
-            this.bttnSoundOn.Font = new System.Drawing.Font("AR DARLING", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.bttnSoundOn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.bttnSoundOn.ForeColor = System.Drawing.Color.Black;
             this.bttnSoundOn.Location = new System.Drawing.Point(6, 16);
             this.bttnSoundOn.Name = "bttnSoundOn";

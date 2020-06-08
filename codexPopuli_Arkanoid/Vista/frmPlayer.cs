@@ -11,6 +11,9 @@ namespace codexPopuli_Arkanoid
         public frmPlayer()
         {
             InitializeComponent();
+            Height = ClientSize.Height;
+                        Width = ClientSize.Width;
+                        WindowState = FormWindowState.Maximized;
             sound = new SoundPlayer();
             sound.SoundLocation = "C:/Users/ivett/Desktop/CloneProyectoPoo/codexPopuli_Arkanoid/codexPopuli_Arkanoid/Resoruces/MenuSong.wav";
         }                    
@@ -29,7 +32,7 @@ namespace codexPopuli_Arkanoid
                 {
                     MessageBox.Show("Todo listo para jugar!", "Arkanoid",
                         MessageBoxButtons.OK);
-                    frmGame juego = new frmGame(player);
+                    frmGame juego = new frmGame(/*player*/);
                     juego.Show();
                     this.Hide();
                 }

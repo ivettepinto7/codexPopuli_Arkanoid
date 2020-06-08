@@ -44,7 +44,7 @@ namespace codexPopuli_Arkanoid
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("AR DARLING", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(18, 26);
             this.label1.Name = "label1";
@@ -77,7 +77,7 @@ namespace codexPopuli_Arkanoid
             // 
             // bttnSoundOff
             // 
-            this.bttnSoundOff.Font = new System.Drawing.Font("AR DARLING", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.bttnSoundOff.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.bttnSoundOff.ForeColor = System.Drawing.Color.Black;
             this.bttnSoundOff.Location = new System.Drawing.Point(63, 16);
             this.bttnSoundOff.Name = "bttnSoundOff";
@@ -89,7 +89,7 @@ namespace codexPopuli_Arkanoid
             // 
             // bttnSoundOn
             // 
-            this.bttnSoundOn.Font = new System.Drawing.Font("AR DARLING", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.bttnSoundOn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.bttnSoundOn.ForeColor = System.Drawing.Color.Black;
             this.bttnSoundOn.Location = new System.Drawing.Point(6, 16);
             this.bttnSoundOn.Name = "bttnSoundOn";

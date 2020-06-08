@@ -70,7 +70,7 @@ namespace codexPopuli_Arkanoid
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.label1, 2);
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("AR DARLING", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(163, 0);
             this.label1.Name = "label1";
@@ -93,7 +93,7 @@ namespace codexPopuli_Arkanoid
             this.bttnAddPlayer.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bttnAddPlayer.BackColor = System.Drawing.Color.White;
             this.bttnAddPlayer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bttnAddPlayer.Font = new System.Drawing.Font("AR DARLING", 32.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.bttnAddPlayer.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.bttnAddPlayer.Location = new System.Drawing.Point(196, 340);
             this.bttnAddPlayer.Name = "bttnAddPlayer";
             this.bttnAddPlayer.Size = new System.Drawing.Size(248, 69);
@@ -106,7 +106,7 @@ namespace codexPopuli_Arkanoid
             // 
             this.bttnPlay.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bttnPlay.BackColor = System.Drawing.Color.White;
-            this.bttnPlay.Font = new System.Drawing.Font("AR DARLING", 32.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.bttnPlay.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.bttnPlay.Location = new System.Drawing.Point(516, 340);
             this.bttnPlay.Name = "bttnPlay";
             this.bttnPlay.Size = new System.Drawing.Size(248, 69);
@@ -130,7 +130,7 @@ namespace codexPopuli_Arkanoid
             // 
             // bttnSoundOff
             // 
-            this.bttnSoundOff.Font = new System.Drawing.Font("AR DARLING", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.bttnSoundOff.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.bttnSoundOff.ForeColor = System.Drawing.Color.Black;
             this.bttnSoundOff.Location = new System.Drawing.Point(63, 16);
             this.bttnSoundOff.Name = "bttnSoundOff";
@@ -142,7 +142,7 @@ namespace codexPopuli_Arkanoid
             // 
             // bttnSoundOn
             // 
-            this.bttnSoundOn.Font = new System.Drawing.Font("AR DARLING", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.bttnSoundOn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.bttnSoundOn.ForeColor = System.Drawing.Color.Black;
             this.bttnSoundOn.Location = new System.Drawing.Point(6, 16);
             this.bttnSoundOn.Name = "bttnSoundOn";
