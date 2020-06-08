@@ -31,7 +31,9 @@ namespace codexPopuli_Arkanoid
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pcbPlayer = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize) (this.pcbPlayer)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,10 +45,16 @@ namespace codexPopuli_Arkanoid
             this.pcbPlayer.TabIndex = 0;
             this.pcbPlayer.TabStop = false;
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 10;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // frmGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.pcbPlayer);
@@ -56,12 +64,14 @@ namespace codexPopuli_Arkanoid
             this.Text = "frmGame";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmGame_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmGame_KeyDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.frmGame_MouseMove);
             ((System.ComponentModel.ISupportInitialize) (this.pcbPlayer)).EndInit();
             this.ResumeLayout(false);
         }
 
         private System.Windows.Forms.PictureBox pcbPlayer;
+        private System.Windows.Forms.Timer timer1;
 
         #endregion
     }
