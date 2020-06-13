@@ -157,7 +157,8 @@
         <None Include="App.config" />
     </ItemGroup>
     <ItemGroup>
-      <Content Include="Resoruces\MenuSong.wav" />
+      <Content Include="Properties\MenuSong.wav" />
+      <Content Include="Resources\MenuSong.wav" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

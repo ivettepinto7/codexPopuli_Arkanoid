@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Media;
 using codexPopuli_Arkanoid.Properties;
 
 namespace codexPopuli_Arkanoid
@@ -22,7 +24,7 @@ namespace codexPopuli_Arkanoid
             Width = ClientSize.Width;
             WindowState = FormWindowState.Maximized;
             sound = new SoundPlayer();
-            sound.SoundLocation = "C:/Users/ivett/Desktop/CloneProyectoPoo/codexPopuli_Arkanoid/codexPopuli_Arkanoid/Resoruces/MenuSong.wav";
+            sound.SoundLocation = "./Resources/MenuSong.wav";
         }
 
         private void bttnPlay_Click(object sender, EventArgs e)

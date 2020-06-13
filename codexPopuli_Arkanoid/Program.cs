@@ -17,7 +17,7 @@ namespace codexPopuli_Arkanoid
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmGame());
+            Application.Run(new Form1());
         }
     }
 }
