@@ -1,16 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
-using System.Drawing;
-using System.IO;
-using System.Linq;
 using System.Media;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using codexPopuli_Arkanoid.Properties;
 
 namespace codexPopuli_Arkanoid
 {
@@ -20,13 +10,18 @@ namespace codexPopuli_Arkanoid
         public Form1()
         {
             InitializeComponent();
+            
+            //Maximizar pantalla
             Height = ClientSize.Height;
             Width = ClientSize.Width;
-            WindowState = FormWindowState.Maximized;
+            WindowState = FormWindowState.Maximized; 
+            
+            //Establecer el archivo de audio
             sound = new SoundPlayer();
             sound.SoundLocation = "../../Resources/MenuSong.wav";
         }
-
+        
+        //Boton que abre una ventana para ingresar usuario y jugar
         private void bttnPlay_Click(object sender, EventArgs e)
         {
             frmPlayer Player = new frmPlayer();
@@ -34,6 +29,7 @@ namespace codexPopuli_Arkanoid
             Player.ShowDialog();
         }
         
+        //Boton que muestra el Top 10 de los puntajes
         private void bttnScores_Click(object sender, EventArgs e)
         {
             sound.Stop();
@@ -66,12 +62,14 @@ namespace codexPopuli_Arkanoid
             
         }
 
+        //Boton que reproduce la música
         private void bttnSoundOn_Click(object sender, EventArgs e)
         {
             sound.Play();
             sound.PlayLooping();
         }
 
+        //Boton que detiene la música
         private void bttnSoundOf_Click(object sender, EventArgs e)
         {
             sound.Stop();

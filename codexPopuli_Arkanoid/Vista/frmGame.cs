@@ -8,19 +8,21 @@ namespace codexPopuli_Arkanoid
 {
     public partial class frmGame : Form
     {
-        //private Player player;
+        private Player player;
         private CustomPictureBox[,]cpb;
         private PictureBox ball;
-        public frmGame(/*Player player*/)
+        public frmGame(Player player)
         {
             InitializeComponent();
+            
+            //Maximizar pantalla
             Height = ClientSize.Height;
             Width = ClientSize.Width;
             WindowState = FormWindowState.Maximized;
             //this.player = player;
         }
         
-        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        private void frmGame_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (MessageBox.Show("¿Seguro que desea salir?", 
                 "Arkanoid", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
@@ -29,7 +31,7 @@ namespace codexPopuli_Arkanoid
             }
         }
 
-        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        private void frmGame_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
         }

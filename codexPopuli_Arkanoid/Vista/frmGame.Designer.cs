@@ -68,6 +68,8 @@ namespace codexPopuli_Arkanoid
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.frmGame_MouseMove);
             ((System.ComponentModel.ISupportInitialize) (this.pcbPlayer)).EndInit();
             this.ResumeLayout(false);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmGame_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmGame_FormClosed);
         }
 
         private System.Windows.Forms.PictureBox pcbPlayer;
