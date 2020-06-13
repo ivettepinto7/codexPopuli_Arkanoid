@@ -24,7 +24,7 @@ namespace codexPopuli_Arkanoid
             Width = ClientSize.Width;
             WindowState = FormWindowState.Maximized;
             sound = new SoundPlayer();
-            sound.SoundLocation = "./Resources/MenuSong.wav";
+            sound.SoundLocation = "../../Resources/MenuSong.wav";
         }
 
         private void bttnPlay_Click(object sender, EventArgs e)

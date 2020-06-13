@@ -15,7 +15,7 @@ namespace codexPopuli_Arkanoid
                         Width = ClientSize.Width;
                         WindowState = FormWindowState.Maximized;
             sound = new SoundPlayer();
-            sound.SoundLocation = "C:/Users/ivett/Desktop/CloneProyectoPoo/codexPopuli_Arkanoid/codexPopuli_Arkanoid/Resoruces/MenuSong.wav";
+            sound.SoundLocation = "../../Resources/MenuSong.wav";
         }
 
         private void frmTop10_Load(object sender, EventArgs e)
@@ -24,13 +24,13 @@ namespace codexPopuli_Arkanoid
             dgvScoresTop10.DataSource = null;
             dgvScoresTop10.DataSource = ScoreDAO.GetTop10();
         }
+        
+        private void bttnSoundOn_Click_1(object sender, EventArgs e)
+                {
+                    sound.PlayLooping();
+                }
 
-        private void bttnSoundOn_Click(object sender, EventArgs e)
-        {
-            sound.PlayLooping();
-        }
-
-        private void bttnSoundOf_Click(object sender, EventArgs e)
+        private void bttnSoundOff_Click(object sender, EventArgs e)
         {
             sound.Stop();
         }
