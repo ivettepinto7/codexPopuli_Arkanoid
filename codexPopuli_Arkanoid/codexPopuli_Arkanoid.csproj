@@ -142,6 +142,9 @@
         <EmbeddedResource Include="Vista\ControlMenu.resx">
           <DependentUpon>ControlMenu.cs</DependentUpon>
         </EmbeddedResource>
+        <EmbeddedResource Include="Vista\ControlPlayer.resx">
+          <DependentUpon>ControlPlayer.cs</DependentUpon>
+        </EmbeddedResource>
         <EmbeddedResource Include="Vista\frmGame.resx">
           <DependentUpon>frmGame.cs</DependentUpon>
         </EmbeddedResource>
