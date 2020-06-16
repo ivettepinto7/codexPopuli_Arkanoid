@@ -1,58 +1,52 @@
 ﻿using System;
+using System.Drawing;
 using System.Media;
 using System.Windows.Forms;
 using codexPopuli_Arkanoid.Modelo;
 
 namespace codexPopuli_Arkanoid
 {
-    public partial class frmPlayer : Form
+    public partial class ControlPlayer : UserControl
     {
         //private Player player;
         private SoundPlayer sound;
-        public frmPlayer(/*Player player*/)
+        public ControlPlayer()
         {
             InitializeComponent();
-            
-            //Maximizar pantalla
-            Height = ClientSize.Height;
-            Width = ClientSize.Width;
-            WindowState = FormWindowState.Maximized;
-            
             //Establecer archivo de audio
             sound = new SoundPlayer();
             sound.SoundLocation = "../../Resources/MenuSong.wav";
-        }                    
-        
+            this.BackgroundImage = Image.FromFile("../../Resources/fondoUsuario.png");
+        }
         //Si el nombre existe en la BD empezar juego
-        private void bttnPlay_Click(object sender, EventArgs e)
+        private void BttnPlay_Click(object sender, EventArgs e)
         {
             try
             {
                 var player = PlayerDAO.GetPlayer(txtNickname.Text);
                 if (player.nickname.Equals(""))
                 {
-                    MessageBox.Show("Verifique los datos ingresados",
+                    MessageBox.Show("El usuario no se encuentra registrado\n Presione agregar.",
                         "Arkanoid", MessageBoxButtons.OK);
                 }
                 else
                 {
                     MessageBox.Show($"Todo listo para jugar {player.nickname}!", "Arkanoid",
                         MessageBoxButtons.OK);
-                    frmGame juego = new frmGame(player);
-                    juego.ShowDialog();
-                    this.Hide();
+                    
+                    ((frmGame)this.Parent).jugador(player);
                 }
             }
             catch (Exception exception)
             {
-                MessageBox.Show("Ha ocurrido un error", 
+                MessageBox.Show("Ha ocurrido un error "+exception.Message, 
                     "Arkanoid", MessageBoxButtons.OK);
             }
         }
 
 
         //Si el nombre no existe en la BD crear jugador
-        private void bttnAddPlayer_Click(object sender, EventArgs e)
+        private void BttnAddPlayer_Click(object sender, EventArgs e)
         {
             if (txtNickname.Text.Length >= 5)
             {
@@ -64,29 +58,15 @@ namespace codexPopuli_Arkanoid
         }
 
         //Activar sonido
-        private void bttnSoundOn_Click(object sender, EventArgs e)
+        private void BttnSoundOn_Click(object sender, EventArgs e)
         {
             sound.PlayLooping();
         }
 
         //Detener sonido
-        private void bttnSoundOff_Click(object sender, EventArgs e)
+        private void BttnSoundOff_Click(object sender, EventArgs e)
         {
             sound.Stop();
-        }
-        
-        private void frmPlayer_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (MessageBox.Show("¿Seguro que desea salir?", 
-                "Arkanoid", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
-            {
-                e.Cancel = true;
-            }
-        }
-
-        private void frmPlayer_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
         }
     }
 }

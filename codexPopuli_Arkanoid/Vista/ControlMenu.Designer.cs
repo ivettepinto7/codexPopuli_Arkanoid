@@ -1,13 +1,15 @@
-﻿namespace codexPopuli_Arkanoid
+﻿using System.ComponentModel;
+
+namespace codexPopuli_Arkanoid
 {
-    partial class Form1
+    partial class ControlMenu
     {
-        /// <summary>
+        /// <summary> 
         /// Required designer variable.
         /// </summary>
-        private System.ComponentModel.IContainer components = null;
+        private IContainer components = null;
 
-        /// <summary>
+        /// <summary> 
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
@@ -21,6 +23,8 @@
             base.Dispose(disposing);
         }
 
+        
+        
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -29,7 +33,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ControlArkanoid));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.bttnPlay = new System.Windows.Forms.Button();
             this.bttnScores = new System.Windows.Forms.Button();
@@ -78,7 +82,7 @@
             this.bttnPlay.TabIndex = 0;
             this.bttnPlay.Text = "JUGAR";
             this.bttnPlay.UseVisualStyleBackColor = false;
-            this.bttnPlay.Click += new System.EventHandler(this.bttnPlay_Click);
+            this.bttnPlay.Click += new System.EventHandler(this.BttnPlay_Click);
             // 
             // bttnScores
             // 
@@ -94,7 +98,7 @@
             this.bttnScores.TabIndex = 1;
             this.bttnScores.Text = "PUNTAJES";
             this.bttnScores.UseVisualStyleBackColor = false;
-            this.bttnScores.Click += new System.EventHandler(this.bttnScores_Click);
+            this.bttnScores.Click += new System.EventHandler(this.BttnScores_Click);
             // 
             // bttnExit
             // 
@@ -110,7 +114,7 @@
             this.bttnExit.TabIndex = 2;
             this.bttnExit.Text = "SALIR";
             this.bttnExit.UseVisualStyleBackColor = false;
-            this.bttnExit.Click += new System.EventHandler(this.bttnExit_Click);
+            this.bttnExit.Click += new System.EventHandler(this.BttnExit_Click);
             // 
             // groupBox1
             // 
@@ -134,7 +138,7 @@
             this.bttnSoundOf.TabIndex = 1;
             this.bttnSoundOf.Text = "OFF";
             this.bttnSoundOf.UseVisualStyleBackColor = true;
-            this.bttnSoundOf.Click += new System.EventHandler(this.bttnSoundOf_Click);
+            this.bttnSoundOf.Click += new System.EventHandler(this.BttnSoundOf_Click);
             // 
             // bttnSoundOn
             // 
@@ -146,7 +150,7 @@
             this.bttnSoundOn.TabIndex = 0;
             this.bttnSoundOn.Text = "ON";
             this.bttnSoundOn.UseVisualStyleBackColor = true;
-            this.bttnSoundOn.Click += new System.EventHandler(this.bttnSoundOn_Click);
+            this.bttnSoundOn.Click += new System.EventHandler(this.BttnSoundOn_Click);
             // 
             // Form1
             // 
@@ -157,15 +161,10 @@
             this.ClientSize = new System.Drawing.Size(800, 461);
             this.Controls.Add(this.tableLayoutPanel1);
             this.DoubleBuffered = true;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "Form1";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Name = "ControlMenu";
+            //this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "ControlMenu";
+            this.Load += new System.EventHandler(this.ControlMenu_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);

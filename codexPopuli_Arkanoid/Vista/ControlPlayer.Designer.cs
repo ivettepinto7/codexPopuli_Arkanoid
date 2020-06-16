@@ -2,14 +2,14 @@
 
 namespace codexPopuli_Arkanoid
 {
-    partial class frmPlayer
+    partial class ControlPlayer
     {
-        /// <summary>
+        /// <summary> 
         /// Required designer variable.
         /// </summary>
         private IContainer components = null;
 
-        /// <summary>
+        /// <summary> 
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
@@ -31,7 +31,7 @@ namespace codexPopuli_Arkanoid
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPlayer));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ControlArkanoid));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.txtNickname = new System.Windows.Forms.TextBox();
@@ -100,7 +100,7 @@ namespace codexPopuli_Arkanoid
             this.bttnAddPlayer.TabIndex = 2;
             this.bttnAddPlayer.Text = "AGREGAR";
             this.bttnAddPlayer.UseVisualStyleBackColor = false;
-            this.bttnAddPlayer.Click += new System.EventHandler(this.bttnAddPlayer_Click);
+            this.bttnAddPlayer.Click += new System.EventHandler(this.BttnAddPlayer_Click);
             // 
             // bttnPlay
             // 
@@ -113,7 +113,7 @@ namespace codexPopuli_Arkanoid
             this.bttnPlay.TabIndex = 3;
             this.bttnPlay.Text = "JUGAR";
             this.bttnPlay.UseVisualStyleBackColor = false;
-            this.bttnPlay.Click += new System.EventHandler(this.bttnPlay_Click);
+            this.bttnPlay.Click += new System.EventHandler(this.BttnPlay_Click);
             // 
             // groupBox1
             // 
@@ -138,7 +138,7 @@ namespace codexPopuli_Arkanoid
             this.bttnSoundOff.TabIndex = 1;
             this.bttnSoundOff.Text = "OFF";
             this.bttnSoundOff.UseVisualStyleBackColor = true;
-            this.bttnSoundOff.Click += new System.EventHandler(this.bttnSoundOff_Click);
+            this.bttnSoundOff.Click += new System.EventHandler(this.BttnSoundOff_Click);
             // 
             // bttnSoundOn
             // 
@@ -150,9 +150,9 @@ namespace codexPopuli_Arkanoid
             this.bttnSoundOn.TabIndex = 0;
             this.bttnSoundOn.Text = "ON";
             this.bttnSoundOn.UseVisualStyleBackColor = true;
-            this.bttnSoundOn.Click += new System.EventHandler(this.bttnSoundOn_Click);
+            this.bttnSoundOn.Click += new System.EventHandler(this.BttnSoundOn_Click);
             // 
-            // frmPlayer
+            // ControlPlayer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -161,13 +161,8 @@ namespace codexPopuli_Arkanoid
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tableLayoutPanel1);
             this.DoubleBuffered = true;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "frmPlayer";
-            this.Text = "frmPlayer";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmPlayer_FormClosing);
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmPlayer_FormClosed);
+            this.Name = "ControlPlayer";
+            this.Text = "ControlPlayer";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);

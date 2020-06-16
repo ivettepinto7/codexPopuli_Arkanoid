@@ -38,9 +38,6 @@ C:\Users\oara1\Desktop\codexPopuli_Arkanoid\codexPopuli_Arkanoid\obj\Debug\codex
 C:\Users\oara1\Desktop\codexPopuli_Arkanoid\codexPopuli_Arkanoid\obj\Debug\codexPopuli_Arkanoid.exe.config
 C:\Users\oara1\Desktop\codexPopuli_Arkanoid\codexPopuli_Arkanoid\obj\Debug\codexPopuli_Arkanoid.Properties.Resources.resources
 C:\Users\oara1\Desktop\codexPopuli_Arkanoid\codexPopuli_Arkanoid\obj\Debug\codexPopuli_Arkanoid.frmGame.resources
-C:\Users\oara1\Desktop\codexPopuli_Arkanoid\codexPopuli_Arkanoid\obj\Debug\codexPopuli_Arkanoid.Form1.resources
-C:\Users\oara1\Desktop\codexPopuli_Arkanoid\codexPopuli_Arkanoid\obj\Debug\codexPopuli_Arkanoid.frmPlayer.resources
-C:\Users\oara1\Desktop\codexPopuli_Arkanoid\codexPopuli_Arkanoid\obj\Debug\codexPopuli_Arkanoid.frmTop10.resources
 C:\Users\oara1\Desktop\codexPopuli_Arkanoid\codexPopuli_Arkanoid\obj\Debug\codexPopuli_Arkanoid.csproj.GenerateResource.cache
 C:\Users\oara1\Desktop\codexPopuli_Arkanoid\codexPopuli_Arkanoid\obj\Debug\codexPopuli_Arkanoid.csproj.CoreCompileInputs.cache
 C:\Users\oara1\Desktop\codexPopuli_Arkanoid\codexPopuli_Arkanoid\obj\Debug\codexPopuli_Arkanoid.exe
@@ -70,3 +67,5 @@ C:\Users\oara1\Desktop\codexPopuli_Arkanoid\codexPopuli_Arkanoid\bin\Debug\Syste
 C:\Users\oara1\Desktop\codexPopuli_Arkanoid\codexPopuli_Arkanoid\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\oara1\Desktop\codexPopuli_Arkanoid\codexPopuli_Arkanoid\bin\Debug\System.ValueTuple.xml
 C:\Users\oara1\Desktop\codexPopuli_Arkanoid\codexPopuli_Arkanoid\obj\Debug\codexPopuli_Arkanoid.csproj.CopyComplete
+C:\Users\oara1\Desktop\codexPopuli_Arkanoid\codexPopuli_Arkanoid\obj\Debug\codexPopuli_Arkanoid.ControlArkanoid.resources
+C:\Users\oara1\Desktop\codexPopuli_Arkanoid\codexPopuli_Arkanoid\obj\Debug\codexPopuli_Arkanoid.ControlMenu.resources

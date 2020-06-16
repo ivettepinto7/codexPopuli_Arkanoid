@@ -97,29 +97,35 @@
         <Compile Include="Modelo\Score.cs" />
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
+        <Compile Include="Vista\ControlArkanoid.cs">
+          <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="Vista\ControlArkanoid.Designer.cs">
+          <DependentUpon>ControlArkanoid.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Vista\ControlMenu.cs">
+          <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="Vista\ControlMenu.Designer.cs">
+          <DependentUpon>ControlMenu.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Vista\ControlPlayer.cs">
+          <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="Vista\ControlPlayer.Designer.cs">
+          <DependentUpon>ControlPlayer.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Vista\ControlTop10.cs">
+          <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="Vista\ControlTop10.Designer.cs">
+          <DependentUpon>ControlTop10.cs</DependentUpon>
+        </Compile>
         <Compile Include="Vista\frmGame.cs">
           <SubType>Form</SubType>
         </Compile>
         <Compile Include="Vista\frmGame.Designer.cs">
           <DependentUpon>frmGame.cs</DependentUpon>
-        </Compile>
-        <Compile Include="Vista\frmMenu.cs">
-          <SubType>Form</SubType>
-        </Compile>
-        <Compile Include="Vista\frmMenu.Designer.cs">
-          <DependentUpon>frmMenu.cs</DependentUpon>
-        </Compile>
-        <Compile Include="Vista\frmPlayer.cs">
-          <SubType>Form</SubType>
-        </Compile>
-        <Compile Include="Vista\frmPlayer.Designer.cs">
-          <DependentUpon>frmPlayer.cs</DependentUpon>
-        </Compile>
-        <Compile Include="Vista\frmTop10.cs">
-          <SubType>Form</SubType>
-        </Compile>
-        <Compile Include="Vista\frmTop10.Designer.cs">
-          <DependentUpon>frmTop10.cs</DependentUpon>
         </Compile>
         <EmbeddedResource Include="Properties\Resources.resx">
             <Generator>ResXFileCodeGenerator</Generator>
@@ -130,17 +136,14 @@
             <AutoGen>True</AutoGen>
             <DependentUpon>Resources.resx</DependentUpon>
         </Compile>
+        <EmbeddedResource Include="Vista\ControlArkanoid.resx">
+          <DependentUpon>ControlArkanoid.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Vista\ControlMenu.resx">
+          <DependentUpon>ControlMenu.cs</DependentUpon>
+        </EmbeddedResource>
         <EmbeddedResource Include="Vista\frmGame.resx">
           <DependentUpon>frmGame.cs</DependentUpon>
-        </EmbeddedResource>
-        <EmbeddedResource Include="Vista\frmMenu.resx">
-          <DependentUpon>frmMenu.cs</DependentUpon>
-        </EmbeddedResource>
-        <EmbeddedResource Include="Vista\frmPlayer.resx">
-          <DependentUpon>frmPlayer.cs</DependentUpon>
-        </EmbeddedResource>
-        <EmbeddedResource Include="Vista\frmTop10.resx">
-          <DependentUpon>frmTop10.cs</DependentUpon>
         </EmbeddedResource>
         <None Include="packages.config" />
         <None Include="Properties\Settings.settings">

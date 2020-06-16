@@ -35,7 +35,7 @@ namespace codexPopuli_Arkanoid.Modelo
             }
             catch (Exception e)
             {
-                MessageBox.Show("Ocurrió un error", "Arkanoid",
+                MessageBox.Show("Ocurrió un error "+e.Message, "Arkanoid",
                     MessageBoxButtons.OK);
             }
         }

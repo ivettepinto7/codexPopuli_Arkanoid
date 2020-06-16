@@ -2,14 +2,14 @@
 
 namespace codexPopuli_Arkanoid
 {
-    partial class frmTop10
+    partial class ControlTop10
     {
-        /// <summary>
+        /// <summary> 
         /// Required designer variable.
         /// </summary>
         private IContainer components = null;
 
-        /// <summary>
+        /// <summary> 
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
@@ -31,7 +31,7 @@ namespace codexPopuli_Arkanoid
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(codexPopuli_Arkanoid.frmTop10));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(codexPopuli_Arkanoid.ControlArkanoid));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.bttnSoundOff = new System.Windows.Forms.Button();
@@ -75,7 +75,7 @@ namespace codexPopuli_Arkanoid
             this.bttnSoundOff.TabIndex = 1;
             this.bttnSoundOff.Text = "OFF";
             this.bttnSoundOff.UseVisualStyleBackColor = true;
-            this.bttnSoundOff.Click += new System.EventHandler(this.bttnSoundOff_Click);
+            this.bttnSoundOff.Click += new System.EventHandler(this.BttnSoundOff_Click);
             this.bttnSoundOn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.bttnSoundOn.ForeColor = System.Drawing.Color.Black;
             this.bttnSoundOn.Location = new System.Drawing.Point(6, 16);
@@ -84,7 +84,7 @@ namespace codexPopuli_Arkanoid
             this.bttnSoundOn.TabIndex = 0;
             this.bttnSoundOn.Text = "ON";
             this.bttnSoundOn.UseVisualStyleBackColor = true;
-            this.bttnSoundOn.Click += new System.EventHandler(this.bttnSoundOn_Click_1);
+            this.bttnSoundOn.Click += new System.EventHandler(this.BttnSoundOn_Click_1);
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label1.ForeColor = System.Drawing.Color.White;
@@ -109,11 +109,9 @@ namespace codexPopuli_Arkanoid
             this.ClientSize = new System.Drawing.Size(407, 428);
             this.Controls.Add(this.tableLayoutPanel1);
             this.DoubleBuffered = true;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "frmTop10";
-            this.Text = "frmTop10";
-            this.Load += new System.EventHandler(this.frmTop10_Load);
+            this.Name = "ControlTop10";
+            this.Text = "ControlTop10";
+            this.Load += new System.EventHandler(this.ControlTop10_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize) (this.dgvScoresTop10)).EndInit();

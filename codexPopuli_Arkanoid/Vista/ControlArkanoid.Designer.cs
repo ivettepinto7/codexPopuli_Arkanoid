@@ -2,14 +2,14 @@
 
 namespace codexPopuli_Arkanoid
 {
-    partial class frmGame
+    partial class ControlArkanoid
     {
-        /// <summary>
+        /// <summary> 
         /// Required designer variable.
         /// </summary>
         private IContainer components = null;
 
-        /// <summary>
+        /// <summary> 
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
@@ -45,22 +45,22 @@ namespace codexPopuli_Arkanoid
             this.pcbPlayer.TabIndex = 0;
             this.pcbPlayer.TabStop = false;
             // 
-            // frmGame
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
+            // 
+            // ControlArkanoid
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.pcbPlayer);
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "frmGame";
-            this.Text = "frmGame";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmGame_FormClosing);
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmGame_FormClosed);
-            this.Load += new System.EventHandler(this.frmGame_Load);
+            this.Name = "ControlArkanoid";
+            this.Size = new System.Drawing.Size(800, 450);
+            this.Load += new System.EventHandler(this.ControlArkanoid_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ControlArkanoid_KeyDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ControlArkanoid_MouseMove);
             ((System.ComponentModel.ISupportInitialize) (this.pcbPlayer)).EndInit();
             this.ResumeLayout(false);
         }

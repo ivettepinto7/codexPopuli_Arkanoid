@@ -1,28 +1,28 @@
 ﻿using System;
+using System.Drawing;
+using System.Media;
 using System.Windows.Forms;
 using codexPopuli_Arkanoid.Modelo;
-using System.Media;
 
 namespace codexPopuli_Arkanoid
 {
-    public partial class frmTop10 : Form
+    public partial class ControlTop10 : UserControl
     {
+    
         private SoundPlayer sound;
-        public frmTop10()
+        public ControlTop10()
         {
             InitializeComponent();
-            //Maximizar pantalla
-            Height = ClientSize.Height;
-            Width = ClientSize.Width;
-            WindowState = FormWindowState.Maximized;
             
             //Establecer el archivo de audio
             sound = new SoundPlayer();
             sound.SoundLocation = "../../Resources/MenuSong.wav";
+            
+            this.BackgroundImage = Image.FromFile("../../Resources/fondoTop10.png");
         }
         
         //Poblar el data grid view con los datos de la consulta
-        private void frmTop10_Load(object sender, EventArgs e)
+        private void ControlTop10_Load(object sender, EventArgs e)
         {
             sound.PlayLooping();
             dgvScoresTop10.DataSource = null;
@@ -30,13 +30,13 @@ namespace codexPopuli_Arkanoid
         }
         
         //Activar sonido
-        private void bttnSoundOn_Click_1(object sender, EventArgs e)
+        private void BttnSoundOn_Click_1(object sender, EventArgs e)
         {
             sound.PlayLooping();
         }
 
         //Detener sonido
-        private void bttnSoundOff_Click(object sender, EventArgs e)
+        private void BttnSoundOff_Click(object sender, EventArgs e)
         {
             sound.Stop();
         }
