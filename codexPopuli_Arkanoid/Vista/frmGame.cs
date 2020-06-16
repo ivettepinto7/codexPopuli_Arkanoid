@@ -63,10 +63,6 @@ namespace codexPopuli_Arkanoid
                     this.ChangeControl(control);
                 }
 
-            public void jugador(Player play)
-            {
-                this.ChangeControl(new ControlArkanoid(play));
-            }
 
         
     }

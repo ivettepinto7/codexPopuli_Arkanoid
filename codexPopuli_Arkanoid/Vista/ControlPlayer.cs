@@ -33,8 +33,8 @@ namespace codexPopuli_Arkanoid
                 {
                     MessageBox.Show($"Todo listo para jugar {player.nickname}!", "Arkanoid",
                         MessageBoxButtons.OK);
-                    
-                    ((frmGame)this.Parent).jugador(player);
+                    ControlArkanoid cont = new ControlArkanoid(player);
+                    ((frmGame)this.Parent).ShowControl(cont);
                 }
             }
             catch (Exception exception)
