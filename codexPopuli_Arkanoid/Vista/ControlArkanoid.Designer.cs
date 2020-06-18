@@ -32,18 +32,18 @@ namespace codexPopuli_Arkanoid
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.pcbPlayer = new System.Windows.Forms.PictureBox();
+            this.cpbPlayer = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            ((System.ComponentModel.ISupportInitialize) (this.pcbPlayer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.cpbPlayer)).BeginInit();
             this.SuspendLayout();
             // 
             // pcbPlayer
             // 
-            this.pcbPlayer.Location = new System.Drawing.Point(22, 397);
-            this.pcbPlayer.Name = "pcbPlayer";
-            this.pcbPlayer.Size = new System.Drawing.Size(162, 32);
-            this.pcbPlayer.TabIndex = 0;
-            this.pcbPlayer.TabStop = false;
+            this.cpbPlayer.Location = new System.Drawing.Point(22, 397);
+            this.cpbPlayer.Name = "cpbPlayer";
+            this.cpbPlayer.Size = new System.Drawing.Size(162, 32);
+            this.cpbPlayer.TabIndex = 0;
+            this.cpbPlayer.TabStop = false;
             // 
             // timer1
             // 
@@ -55,17 +55,17 @@ namespace codexPopuli_Arkanoid
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Controls.Add(this.pcbPlayer);
+            this.Controls.Add(this.cpbPlayer);
             this.Name = "ControlArkanoid";
             this.Size = new System.Drawing.Size(800, 450);
             this.Load += new System.EventHandler(this.ControlArkanoid_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ControlArkanoid_KeyDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ControlArkanoid_MouseMove);
-            ((System.ComponentModel.ISupportInitialize) (this.pcbPlayer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.cpbPlayer)).EndInit();
             this.ResumeLayout(false);
         }
 
-        private System.Windows.Forms.PictureBox pcbPlayer;
+        private System.Windows.Forms.PictureBox cpbPlayer;
         private System.Windows.Forms.Timer timer1;
 
         #endregion
