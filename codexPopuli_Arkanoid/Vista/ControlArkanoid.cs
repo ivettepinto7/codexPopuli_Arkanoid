@@ -64,7 +64,7 @@ namespace codexPopuli_Arkanoid
             
             Controls.Add(scoreLifePanel);
 
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < GameData.Lifes; i++)
             {
                 hearts[i] = new PictureBox();
                 hearts[i].BackgroundImage = Image.FromFile("../../img/Heart.png");
@@ -205,13 +205,18 @@ namespace codexPopuli_Arkanoid
             {
                 for (int j = 0; j < 10; j++)
                 {
-                    if (ball.Bounds.IntersectsWith(cpb[i, j].Bounds))
+                    if (cpb[i,j] != null && ball.Bounds.IntersectsWith(cpb[i, j].Bounds))
                     {
                         cpb[i,j].Hits--;
-                        GameData.GameScore += 3;
-                        lblScore.Text = GameData.GameScore.ToString();
-                        if (cpb[i, j].Hits == 0)
+                        
+                        if(cpb[i,j].Hits == 0)
+                        {
                             Controls.Remove(cpb[i, j]);
+                            cpb[i, j] = null;
+                            GameData.GameScore += 3;
+                            lblScore.Text = GameData.GameScore.ToString();
+                        }
+                        
                                     
                         GameData.DirY= -GameData.DirY;
                         return;
