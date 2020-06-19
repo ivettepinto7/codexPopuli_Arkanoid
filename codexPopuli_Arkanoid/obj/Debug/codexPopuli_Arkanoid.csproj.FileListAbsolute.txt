@@ -105,3 +105,4 @@ C:\Users\marco\Documents\uca\proPoo\codexPopuli_Arkanoid\codexPopuli_Arkanoid\ob
 C:\Users\marco\Documents\uca\proPoo\codexPopuli_Arkanoid\codexPopuli_Arkanoid\obj\Debug\codexPopuli_Arkanoid.csproj.CopyComplete
 C:\Users\marco\Documents\uca\proPoo\codexPopuli_Arkanoid\codexPopuli_Arkanoid\obj\Debug\codexPopuli_Arkanoid.exe
 C:\Users\marco\Documents\uca\proPoo\codexPopuli_Arkanoid\codexPopuli_Arkanoid\obj\Debug\codexPopuli_Arkanoid.pdb
+C:\Users\marco\Documents\uca\proPoo\codexPopuli_Arkanoid\codexPopuli_Arkanoid\obj\Debug\codexPopuli_Arkanoid.ControlTop10.resources

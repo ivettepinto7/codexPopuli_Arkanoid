@@ -37,7 +37,7 @@ namespace codexPopuli_Arkanoid
             ((System.ComponentModel.ISupportInitialize) (this.cpbPlayer)).BeginInit();
             this.SuspendLayout();
             // 
-            // pcbPlayer
+            // cpbPlayer
             // 
             this.cpbPlayer.Location = new System.Drawing.Point(22, 397);
             this.cpbPlayer.Name = "cpbPlayer";

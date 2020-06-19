@@ -8,7 +8,6 @@ namespace codexPopuli_Arkanoid
 {
     public partial class frmGame : Form
     {
-        
         private Control currentControl;
         public frmGame()
         {
@@ -35,8 +34,7 @@ namespace codexPopuli_Arkanoid
         {
             Application.Exit();
         }
-
-
+        
         private void frmGame_Load(object sender, EventArgs e)
         {
             currentControl= new ControlMenu();
@@ -45,25 +43,28 @@ namespace codexPopuli_Arkanoid
             currentControl.Width = Width;
             currentControl.Height = Height;
         }
-        public void ChangeControl(Control newControl) {
-                if(newControl == null) {
-                    throw new ArgumentNullException("newControl");
-                }
-                if(currentControl != null) {
-                    this.Controls.Remove(currentControl);
-                }
-                currentControl = newControl;
-                currentControl.Width = Width;
-                currentControl.Height = Height;
-                this.Controls.Add(newControl);
-                
-            }
-            public void ShowControl(UserControl control) {
-                //cambiando currectUserControl
-                    this.ChangeControl(control);
-                }
-
-
         
+        public void ChangeControl(Control newControl) 
+        {
+            if(newControl == null)
+            {
+                throw new ArgumentNullException("newControl");
+            }
+            
+            if(currentControl != null) 
+            { 
+                this.Controls.Remove(currentControl);
+            }
+            currentControl = newControl;
+            currentControl.Width = Width;
+            currentControl.Height = Height;
+            this.Controls.Add(newControl);
+        }
+        
+        public void ShowControl(UserControl control) 
+        {
+            //cambiando currectUserControl
+            this.ChangeControl(control);
+        }
     }
 }

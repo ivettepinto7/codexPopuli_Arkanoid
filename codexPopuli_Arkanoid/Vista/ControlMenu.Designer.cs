@@ -33,7 +33,6 @@ namespace codexPopuli_Arkanoid
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ControlArkanoid));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.bttnPlay = new System.Windows.Forms.Button();
             this.bttnScores = new System.Windows.Forms.Button();
@@ -152,18 +151,15 @@ namespace codexPopuli_Arkanoid
             this.bttnSoundOn.UseVisualStyleBackColor = true;
             this.bttnSoundOn.Click += new System.EventHandler(this.BttnSoundOn_Click);
             // 
-            // Form1
+            // ControlMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 461);
             this.Controls.Add(this.tableLayoutPanel1);
             this.DoubleBuffered = true;
             this.Name = "ControlMenu";
-            //this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ControlMenu";
+            this.Size = new System.Drawing.Size(800, 461);
             this.Load += new System.EventHandler(this.ControlMenu_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);

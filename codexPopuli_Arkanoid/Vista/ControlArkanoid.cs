@@ -8,11 +8,11 @@ namespace codexPopuli_Arkanoid
     public partial class ControlArkanoid : UserControl
     {
         private Player player;
-        private Panel scoreLifePanel = new Panel();
+        private Panel scoreLifePanel;
         private CustomPictureBox[,]cpb;
-        private PictureBox ball;// = new PictureBox();
-        private PictureBox[] hearts = new PictureBox[3];
-        private Label lblScore = new Label();
+        private PictureBox ball;
+        private PictureBox[] hearts;
+        private Label lblScore;
         private delegate void BallActions();
         private readonly BallActions  BallMovment;
         
@@ -21,81 +21,64 @@ namespace codexPopuli_Arkanoid
             InitializeComponent();
             BallMovment = BounceBall;
             BallMovment += MoveBall;
-            this.player= jug;
+            player = jug;
         }
         
+        //Inicializa y establece cada elemento.
         private void ControlArkanoid_Load(object sender, EventArgs e)
         {
-            LoadPlayer();
-            LoadBall();
-            LoadTiles();
-            LoadPanel();
-        }
-
-        private void LoadPlayer()
-        {
-            cpbPlayer.Show();
             cpbPlayer.BackgroundImage= Image.FromFile("../../img/Player.png");
             cpbPlayer.BackgroundImageLayout = ImageLayout.Stretch;
-            cpbPlayer.Top = (this.Height - cpbPlayer.Height) - 80; cpbPlayer.Left = (Width/2) - (cpbPlayer.Width/2);
-        }
-        
-        private void LoadBall()
-        {
+            cpbPlayer.Top = Height - cpbPlayer.Height - 80; cpbPlayer.Left = (Width/2) - (cpbPlayer.Width/2);
+            
             ball = new PictureBox();
             ball.Width= ball.Height= 20;
             ball.BackgroundImage=Image.FromFile("../../img/Ball.png");
             ball.BackgroundImageLayout= ImageLayout.Stretch;
-            
             ball.Top = cpbPlayer.Top - ball.Height;
-            ball.Left= cpbPlayer.Left + (cpbPlayer.Width/2)- (ball.Width/2);
+            ball.Left= cpbPlayer.Left + cpbPlayer.Width/2 - ball.Width/2;
             Controls.Add((ball));
+            
+            LoadTiles();
+            LoadPanel();
         }
 
-        //Funcion encargada de lo contenido en el panel, panel, corazones y puntaje
+        //Encargada de lo contenido en el panel, panel, corazones y puntaje.
         private void LoadPanel()
         {
             scoreLifePanel = new Panel();
-            scoreLifePanel.BackColor = Color.CadetBlue;
-            scoreLifePanel.ForeColor = Color.Black;
             scoreLifePanel.Width = Width;
             scoreLifePanel.Height = (int) (Height * 0.08);
             scoreLifePanel.Top = scoreLifePanel.Left = 0;
+            scoreLifePanel.BackColor = Color.CadetBlue;
+            scoreLifePanel.ForeColor = Color.Black;
             
             Controls.Add(scoreLifePanel);
 
+            
+            hearts = new PictureBox[GameData.Lifes];
             for (int i = 0; i < GameData.Lifes; i++)
             {
                 hearts[i] = new PictureBox();
+                hearts[i].Width = hearts[i].Height = 40;
                 hearts[i].BackgroundImage = Image.FromFile("../../img/Heart.png");
                 hearts[i].BackgroundImageLayout = ImageLayout.Stretch;
-                hearts[i].Width = hearts[i].Height = 40;
                 hearts[i].Top = scoreLifePanel.Top + (hearts[0].Height / 4);
-                switch (i)
-                {
-                    case 0:
-                        hearts[0].Left = Width / 2 - 60;
-                        break;
-                    case 1:
-                        hearts[1].Left = Width / 2 - 20;
-                        break;
-                    case 2:
-                        hearts[2].Left = Width / 2 + 20;
-                        break;
-                }
+                hearts[i].Left = hearts[i].Width * i + 1;
                 hearts[i].Tag = "heartTag";
                 
                 scoreLifePanel.Controls.Add(hearts[i]);
             }
             
+            
             lblScore = new Label();
             lblScore.ForeColor = Color.White;
             lblScore.Text = GameData.GameScore.ToString();
+            lblScore.TextAlign = ContentAlignment.MiddleCenter;
             lblScore.Font = new Font("Carlito" , 25f);
             lblScore.Left = Width - 100;
             lblScore.Height = scoreLifePanel.Height;
-            lblScore.TextAlign = ContentAlignment.MiddleCenter;
-            
+
             scoreLifePanel.Controls.Add(lblScore);
         }
         
@@ -140,6 +123,7 @@ namespace codexPopuli_Arkanoid
             return new Random().Next(1,8);
         }
         
+        
         private void ControlArkanoid_MouseMove(object sender, MouseEventArgs e)
         {
             if(!GameData.GameStarted)
@@ -157,6 +141,7 @@ namespace codexPopuli_Arkanoid
             }
         }
         
+        //Iniciar el juego con space.
         private void  ControlArkanoid_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Space)
@@ -174,21 +159,22 @@ namespace codexPopuli_Arkanoid
             BallMovment?.Invoke();
         }
         
+        //Maneja la trayectoria y ocurrencias de la pelota.
         private void BounceBall()
         {
-            if (ball.Top < 0)
-            {
-                GameData.DirY = -GameData.DirY;
-            }
-            
             if (ball.Bottom > Height)
             {
                 GameData.Lifes--;
                 scoreLifePanel.Controls.Remove(hearts[GameData.Lifes]);
+                hearts[GameData.Lifes] = null;
                 GameData.GameStarted = false;
                 timer1.Stop();
-                //pcbPlayer.Hide();
                 LifeCheck();
+            }
+            
+            if (ball.Top < 0)
+            {
+                GameData.DirY = -GameData.DirY;
             }
             
             if(ball.Left<=0||ball.Right>=Width){
@@ -217,7 +203,6 @@ namespace codexPopuli_Arkanoid
                             lblScore.Text = GameData.GameScore.ToString();
                         }
                         
-                                    
                         GameData.DirY= -GameData.DirY;
                         return;
                     }
@@ -231,16 +216,17 @@ namespace codexPopuli_Arkanoid
             ball.Top+= GameData.DirY;
         }
 
+        //Revisa las vidas restantes del jugador y reposiciona los elementos 
         private void LifeCheck()
         {
             if (GameData.Lifes == 0)
-            {
                 Application.Exit();
-            }
+            
             else
             {
-                LoadPlayer();
-                LoadBall();
+                cpbPlayer.Left = (Width/2) - (cpbPlayer.Width/2);
+                ball.Top = cpbPlayer.Top - ball.Height;
+                ball.Left= cpbPlayer.Left + cpbPlayer.Width/2 - ball.Width/2;
             }
         }
     }
