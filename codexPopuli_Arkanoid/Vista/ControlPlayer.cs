@@ -18,7 +18,8 @@ namespace codexPopuli_Arkanoid
             sound.SoundLocation = "../../Resources/MenuSong.wav";
             this.BackgroundImage = Image.FromFile("../../Resources/fondoUsuario.png");
         }
-        //Si el nombre existe en la BD empezar juego
+        
+        //Si el nombre existe en la BD empezar juego.
         private void BttnPlay_Click(object sender, EventArgs e)
         {
             try
@@ -43,7 +44,6 @@ namespace codexPopuli_Arkanoid
                     "Arkanoid", MessageBoxButtons.OK);
             }
         }
-
 
         //Si el nombre no existe en la BD crear jugador
         private void BttnAddPlayer_Click(object sender, EventArgs e)

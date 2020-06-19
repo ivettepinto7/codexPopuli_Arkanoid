@@ -17,40 +17,42 @@ namespace codexPopuli_Arkanoid
             sound.SoundLocation = "../../Resources/MenuSong.wav";
             this.BackgroundImage = Image.FromFile("../../Resources/MenuPrincipal.png");
         }
+        
         //Boton que abre una ventana para ingresar usuario y jugar
         private void BttnPlay_Click(object sender, EventArgs e)
         {
             ControlPlayer Player = new ControlPlayer();
             ((frmGame)this.Parent).ShowControl(Player);
-
         }
+        
         private void BttnScores_Click(object sender, EventArgs e)
         {
                     sound.Stop();
                     ControlTop10 top = new ControlTop10();
                     ((frmGame)this.Parent).ShowControl(top);
         }
+        
         private void BttnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
+        
         private void ControlMenu_Load(object sender, EventArgs e)
-                {
-                    sound.PlayLooping();
-                    
-                }
+        {
+            sound.PlayLooping();
+        }
         
-                //Boton que reproduce la música
-                private void BttnSoundOn_Click(object sender, EventArgs e)
-                {
-                    sound.Play();
-                    sound.PlayLooping();
-                }
+        //Boton que reproduce la música
+        private void BttnSoundOn_Click(object sender, EventArgs e)
+        {
+            sound.Play();
+            sound.PlayLooping();
+        }
         
-                //Boton que detiene la música
-                private void BttnSoundOf_Click(object sender, EventArgs e)
-                {
-                    sound.Stop();
-                }
+        //Boton que detiene la música
+        private void BttnSoundOf_Click(object sender, EventArgs e)
+        {
+            sound.Stop();
+        }
     }
 }

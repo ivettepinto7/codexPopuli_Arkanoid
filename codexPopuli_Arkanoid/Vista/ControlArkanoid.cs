@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Text.Json.Serialization;
 using System.Windows.Forms;
 using codexPopuli_Arkanoid.Modelo;
 
@@ -169,7 +170,7 @@ namespace codexPopuli_Arkanoid
                 hearts[GameData.Lifes] = null;
                 GameData.GameStarted = false;
                 timer1.Stop();
-                LifeCheck();
+                CheckLife();
             }
             
             if (ball.Top < 0)
@@ -194,13 +195,14 @@ namespace codexPopuli_Arkanoid
                     if (cpb[i,j] != null && ball.Bounds.IntersectsWith(cpb[i, j].Bounds))
                     {
                         cpb[i,j].Hits--;
+                        GameData.GameScore += 3;
                         
                         if(cpb[i,j].Hits == 0)
                         {
                             Controls.Remove(cpb[i, j]);
                             cpb[i, j] = null;
-                            GameData.GameScore += 3;
                             lblScore.Text = GameData.GameScore.ToString();
+                            CheckGame();
                         }
                         
                         GameData.DirY= -GameData.DirY;
@@ -217,16 +219,29 @@ namespace codexPopuli_Arkanoid
         }
 
         //Revisa las vidas restantes del jugador y reposiciona los elementos 
-        private void LifeCheck()
+        private void CheckLife()
         {
             if (GameData.Lifes == 0)
                 Application.Exit();
-            
             else
             {
                 cpbPlayer.Left = (Width/2) - (cpbPlayer.Width/2);
                 ball.Top = cpbPlayer.Top - ball.Height;
                 ball.Left= cpbPlayer.Left + cpbPlayer.Width/2 - ball.Width/2;
+            }
+        }
+
+        private void CheckGame()
+        {
+            if (GameData.GameScore == 180)
+            {
+                timer1.Stop();
+                int nscore = GameData.GameScore * GameData.Lifes;
+                string nickname = player.nickname;
+                ScoreDAO.AddScore(nscore , nickname);
+                MessageBox.Show("Felicidades ha completado el juego.",
+                    "Arkanoid", MessageBoxButtons.OK);
+                Application.Exit();
             }
         }
     }
