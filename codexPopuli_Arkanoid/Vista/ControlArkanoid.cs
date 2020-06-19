@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Drawing;
-using System.Text.Json.Serialization;
 using System.Windows.Forms;
 using codexPopuli_Arkanoid.Modelo;
 
@@ -218,7 +217,7 @@ namespace codexPopuli_Arkanoid
             ball.Top+= GameData.DirY;
         }
 
-        //Revisa las vidas restantes del jugador y reposiciona los elementos 
+        //Revisa las vidas restantes del jugador y reposiciona los elementos.
         private void CheckLife()
         {
             if (GameData.Lifes == 0)
@@ -231,6 +230,7 @@ namespace codexPopuli_Arkanoid
             }
         }
 
+        //Revisa los bloques restantes y finaliza el juego.
         private void CheckGame()
         {
             if (GameData.GameScore == 180)
