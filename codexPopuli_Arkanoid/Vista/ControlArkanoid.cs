@@ -24,6 +24,16 @@ namespace codexPopuli_Arkanoid
             player = jug;
         }
         
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams handleParam = base.CreateParams;
+                handleParam.ExStyle |= 0x02000000;   // WS_EX_COMPOSITED       
+                return handleParam;
+            }
+        }
+        
         //Inicializa y establece cada elemento.
         private void ControlArkanoid_Load(object sender, EventArgs e)
         {
@@ -239,7 +249,7 @@ namespace codexPopuli_Arkanoid
                 cpbPlayer.Top = Height - cpbPlayer.Height - 80; cpbPlayer.Left = (Width/2) - (cpbPlayer.Width/2);
                 ball.Top = cpbPlayer.Top - ball.Height;
                 ball.Left= cpbPlayer.Left + cpbPlayer.Width/2 - ball.Width/2;
-                
+                ball.BringToFront();
             }
         }
 
