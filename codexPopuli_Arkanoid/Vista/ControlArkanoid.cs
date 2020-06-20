@@ -5,7 +5,7 @@ using codexPopuli_Arkanoid.Modelo;
 
 namespace codexPopuli_Arkanoid
 {
-    public partial class ControlArkanoid : UserControl
+    public partial class ControlArkanoid : NewControl
     {
         private Player player;
         private Panel scoreLifePanel;
@@ -14,13 +14,13 @@ namespace codexPopuli_Arkanoid
         private PictureBox[] hearts;
         private Label lblScore;
         private delegate void BallActions();
-        private readonly BallActions  BallMovment;
+        private readonly BallActions  BallMovement;
         
         public ControlArkanoid(Player jug)
         {
             InitializeComponent();
-            BallMovment = BounceBall;
-            BallMovment += MoveBall;
+            BallMovement = BounceBall;
+            BallMovement += MoveBall;
             player = jug;
         }
         
@@ -94,7 +94,7 @@ namespace codexPopuli_Arkanoid
                 {
                     cpb[i,j]= new CustomPictureBox();
                                 
-                    if (i == 0)
+                    if (i == 1)
                         cpb[i, j].Hits = 2;
                     else
                         cpb[i, j].Hits = 1;
@@ -156,7 +156,7 @@ namespace codexPopuli_Arkanoid
             if (!GameData.GameStarted)
                 return;
 
-            BallMovment?.Invoke();
+            BallMovement?.Invoke();
         }
         
         //Maneja la trayectoria y ocurrencias de la pelota.
@@ -194,6 +194,11 @@ namespace codexPopuli_Arkanoid
                     if (cpb[i,j] != null && ball.Bounds.IntersectsWith(cpb[i, j].Bounds))
                     {
                         cpb[i,j].Hits--;
+                        if (i ==1)
+                        {
+                            cpb[i,j].BackgroundImage= Image.FromFile("../../img/broken.png");
+                        }
+                        // si la pelota golpea la linea de blinded cambiar a shattered
                         GameData.GameScore += 3;
                         
                         if(cpb[i,j].Hits == 0)
@@ -221,12 +226,20 @@ namespace codexPopuli_Arkanoid
         private void CheckLife()
         {
             if (GameData.Lifes == 0)
-                Application.Exit();
+            {
+                MessageBox.Show("Juego terminado.",
+                    "Arkanoid", MessageBoxButtons.OK);
+                ControlMenu menu = new ControlMenu();
+                GameData.Lifes = 3;
+                GameData.GameScore = 0;
+                ((frmGame) this.Parent).ShowControl(menu);
+            }
             else
             {
-                cpbPlayer.Left = (Width/2) - (cpbPlayer.Width/2);
+                cpbPlayer.Top = Height - cpbPlayer.Height - 80; cpbPlayer.Left = (Width/2) - (cpbPlayer.Width/2);
                 ball.Top = cpbPlayer.Top - ball.Height;
                 ball.Left= cpbPlayer.Left + cpbPlayer.Width/2 - ball.Width/2;
+                
             }
         }
 
@@ -236,12 +249,11 @@ namespace codexPopuli_Arkanoid
             if (GameData.GameScore == 180)
             {
                 timer1.Stop();
-                int nscore = GameData.GameScore * GameData.Lifes;
-                string nickname = player.nickname;
-                ScoreDAO.AddScore(nscore , nickname);
+                ScoreDAO.AddScore(GameData.GameScore * GameData.Lifes , player.nickname);
                 MessageBox.Show("Felicidades ha completado el juego.",
                     "Arkanoid", MessageBoxButtons.OK);
-                Application.Exit();
+                ControlMenu menu = new ControlMenu();
+                ((frmGame) this.Parent).ShowControl(menu);
             }
         }
     }

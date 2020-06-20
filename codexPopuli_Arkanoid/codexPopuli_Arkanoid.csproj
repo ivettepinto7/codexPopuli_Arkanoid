@@ -93,6 +93,7 @@
         <Compile Include="Controlador\ScoreDAO.cs" />
         <Compile Include="Modelo\CustomPictureBox.cs" />
         <Compile Include="Modelo\GameData.cs" />
+        <Compile Include="Modelo\NewControl.cs" />
         <Compile Include="Modelo\Player.cs" />
         <Compile Include="Modelo\Score.cs" />
         <Compile Include="Program.cs" />

@@ -8,7 +8,7 @@ namespace codexPopuli_Arkanoid
 {
     public partial class frmGame : Form
     {
-        private Control currentControl;
+        private NewControl currentControl;
         public frmGame()
         {
             InitializeComponent();
@@ -44,7 +44,7 @@ namespace codexPopuli_Arkanoid
             currentControl.Height = Height;
         }
         
-        public void ChangeControl(Control newControl) 
+        public void ChangeControl(NewControl newControl) 
         {
             if(newControl == null)
             {
@@ -61,9 +61,9 @@ namespace codexPopuli_Arkanoid
             this.Controls.Add(newControl);
         }
         
-        public void ShowControl(UserControl control) 
+        public void ShowControl(NewControl control) 
         {
-            //cambiando currectUserControl
+            //cambiando currentUserControl
             this.ChangeControl(control);
         }
     }

@@ -29,8 +29,7 @@ namespace codexPopuli_Arkanoid.Modelo
             try
             {
                 string sql = string.Format("INSERT INTO score(score , nickname)" +  
-                "VALUES {0} , '{1}';",  nscore , nickname);
-                
+                "VALUES ({0} , '{1}');",  nscore , nickname);
                 ConnectionDB.ExecuteNonQuery(sql);
             }
             catch (Exception e)

@@ -6,7 +6,7 @@ using codexPopuli_Arkanoid.Modelo;
 
 namespace codexPopuli_Arkanoid
 {
-    public partial class ControlPlayer : UserControl
+    public partial class ControlPlayer : NewControl
     {
         //private Player player;
         private SoundPlayer sound;
@@ -35,6 +35,7 @@ namespace codexPopuli_Arkanoid
                     MessageBox.Show($"Todo listo para jugar {player.nickname}!", "Arkanoid",
                         MessageBoxButtons.OK);
                     ControlArkanoid cont = new ControlArkanoid(player);
+                    this.ActiveControl = null;
                     ((frmGame)this.Parent).ShowControl(cont);
                 }
             }
@@ -48,13 +49,22 @@ namespace codexPopuli_Arkanoid
         //Si el nombre no existe en la BD crear jugador
         private void BttnAddPlayer_Click(object sender, EventArgs e)
         {
-            if (txtNickname.Text.Length >= 5)
+            if (txtNickname.Text.Length >= 3)
             {
-                PlayerDAO.CreatePlayer(txtNickname.Text);
+                try
+                {
+                    PlayerDAO.CreatePlayer(txtNickname.Text);
+                }
+                catch (Exception exception)
+                {
+                    MessageBox.Show("El usuario ya existe! "+exception.Message, 
+                        "Arkanoid", MessageBoxButtons.OK);
+                    throw;
+                }
             }
             else
                 MessageBox.Show(
-                    "Ha ocurrido un error");
+                    "Coloque un nickname válido.","Arkanoid", MessageBoxButtons.OK);
         }
 
         //Activar sonido

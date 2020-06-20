@@ -2,10 +2,11 @@
 using System.Drawing;
 using System.Media;
 using System.Windows.Forms;
+using codexPopuli_Arkanoid.Modelo;
 
 namespace codexPopuli_Arkanoid
 {
-    public partial class ControlMenu : UserControl
+    public partial class ControlMenu : NewControl
     {
         private SoundPlayer sound;
         public ControlMenu()

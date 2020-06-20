@@ -6,7 +6,7 @@ using codexPopuli_Arkanoid.Modelo;
 
 namespace codexPopuli_Arkanoid
 {
-    public partial class ControlTop10 : UserControl
+    public partial class ControlTop10 : NewControl
     {
     
         private SoundPlayer sound;
@@ -18,7 +18,7 @@ namespace codexPopuli_Arkanoid
             sound = new SoundPlayer();
             sound.SoundLocation = "../../Resources/MenuSong.wav";
             
-            this.BackgroundImage = Image.FromFile("../../Resources/fondoTop10.png");
+            this.BackgroundImage = Image.FromFile("../../Resources/fondoUsuario.png");
         }
         
         //Poblar el data grid view con los datos de la consulta

@@ -24,20 +24,10 @@ namespace codexPopuli_Arkanoid.Modelo
 
         public static void CreatePlayer(string nickname)
         {
-            try
-            {
                 string sql = string.Format(
                     "INSERT INTO player(nickname) VALUES ('{0}');",
                     nickname);
                 ConnectionDB.ExecuteNonQuery(sql);
-                MessageBox.Show("Se ha agregado el jugador", "Arkanoid",
-                    MessageBoxButtons.OK);
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show("Ocurrió un error "+e.Message, "Arkanoid",
-                    MessageBoxButtons.OK);
-            }
         }
     }
 }
