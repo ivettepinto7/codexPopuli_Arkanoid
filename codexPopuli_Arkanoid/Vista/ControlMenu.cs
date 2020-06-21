@@ -16,6 +16,7 @@ namespace codexPopuli_Arkanoid
             //Establecer el archivo de audio
             sound = new SoundPlayer();
             sound.SoundLocation = "../../Resources/MenuSong.wav";
+            //establecer fondo de pantalla
             this.BackgroundImage = Image.FromFile("../../Resources/MenuPrincipal.png");
         }
         
@@ -25,19 +26,19 @@ namespace codexPopuli_Arkanoid
             ControlPlayer Player = new ControlPlayer();
             ((frmGame)this.Parent).ShowControl(Player);
         }
-        
+        //Boton para abrir Top 10 de puntajes
         private void BttnScores_Click(object sender, EventArgs e)
         {
                     sound.Stop();
                     ControlTop10 top = new ControlTop10();
                     ((frmGame)this.Parent).ShowControl(top);
         }
-        
+        //Boton para salir
         private void BttnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-        
+        //cargar sonido
         private void ControlMenu_Load(object sender, EventArgs e)
         {
             sound.PlayLooping();

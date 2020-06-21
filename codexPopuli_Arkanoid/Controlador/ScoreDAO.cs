@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Windows.Forms;
 
 namespace codexPopuli_Arkanoid.Modelo
 {
@@ -7,17 +8,20 @@ namespace codexPopuli_Arkanoid.Modelo
     {
         public static DataTable GetTop10()
         {
+            
             DataTable scores = null;
-
             try
             {
+                //Crear consulta y guardar datos
                 string sql = string.Format(
                     "SELECT nickname, score FROM score ORDER BY score desc LIMIT 10;");
                 scores = ConnectionDB.ExecuteQuery(sql);
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
+                //Mostrar mensaje de error
+                MessageBox.Show(e.Message, 
+                    "Arkanoid", MessageBoxButtons.OK);
                 throw;
             }
 
@@ -28,30 +32,16 @@ namespace codexPopuli_Arkanoid.Modelo
         {
             try
             {
+                //Crear consulta y agregar puntaje
                 string sql = string.Format("INSERT INTO score(score , nickname)" +  
                 "VALUES ({0} , '{1}');",  nscore , nickname);
                 ConnectionDB.ExecuteNonQuery(sql);
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
-                throw;
-            }
-        }
-
-        public static void UpdatePlayerScore(int nscore, string nickname)
-        {
-            try
-            {
-                string sql = string.Format(
-                    "UPDATE public.score SET score={0}	WHERE nickname='{1}';",
-                    nscore, nickname);
-                
-                ConnectionDB.ExecuteNonQuery(sql);
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
+                //Mostrar mensaje de error
+                MessageBox.Show(e.Message, 
+                    "Arkanoid", MessageBoxButtons.OK);
                 throw;
             }
         }

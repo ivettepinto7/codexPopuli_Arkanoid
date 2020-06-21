@@ -157,7 +157,6 @@ namespace codexPopuli_Arkanoid
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Controls.Add(this.tableLayoutPanel1);
-            this.DoubleBuffered = true;
             this.Name = "ControlMenu";
             this.Size = new System.Drawing.Size(800, 461);
             this.Load += new System.EventHandler(this.ControlMenu_Load);

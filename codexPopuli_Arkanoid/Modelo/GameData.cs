@@ -4,7 +4,7 @@
     {
         public static bool GameStarted = false;
         public static int DirX = 5, DirY = -DirX;
-        public static int Lifes = 3;
+        public static int Lives = 3;
         public static int GameScore = 0;
     }
 }

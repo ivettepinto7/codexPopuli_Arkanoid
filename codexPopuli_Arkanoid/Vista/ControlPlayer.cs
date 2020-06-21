@@ -16,15 +16,18 @@ namespace codexPopuli_Arkanoid
             //Establecer archivo de audio
             sound = new SoundPlayer();
             sound.SoundLocation = "../../Resources/MenuSong.wav";
+            //Establecer fondo de pantalla
             this.BackgroundImage = Image.FromFile("../../Resources/fondoUsuario.png");
         }
         
-        //Si el nombre existe en la BD empezar juego.
+        //boton para iniciar juego.
         private void BttnPlay_Click(object sender, EventArgs e)
         {
             try
             {
+                //Obtener datos de usuario
                 var player = PlayerDAO.GetPlayer(txtNickname.Text);
+                //Verificar si el usuario existe
                 if (player.nickname.Equals(""))
                     throw new UserNotFoundException("El usuario no se encuentra registrado\n Presione agregar.");
                 else
@@ -36,6 +39,7 @@ namespace codexPopuli_Arkanoid
                     ((frmGame)this.Parent).ShowControl(cont);
                 }
             }
+            //capturar excepción
             catch (Exception exception)
             {
                 MessageBox.Show(exception.Message, 
@@ -43,11 +47,12 @@ namespace codexPopuli_Arkanoid
             }
         }
 
-        //Si el nombre no existe en la BD crear jugador
+        //Boton crear usuario
         private void BttnAddPlayer_Click(object sender, EventArgs e)
         {
             try
             {
+                //Verificar formato correcto del nickname
                 switch (txtNickname.Text)
                 {
                     case string aux when aux.Length > 15:
@@ -62,6 +67,7 @@ namespace codexPopuli_Arkanoid
                 }
 
             }
+            //Capturar excepciones
             catch(InvalidNicknameFormatException ex)
             {
                 MessageBox.Show(ex.Message, 

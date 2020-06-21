@@ -40,7 +40,7 @@ namespace codexPopuli_Arkanoid
         {
             sound.Stop();
         }
-
+        //Boton regresar a menu principal
         private void btnReturn_Click(object sender, EventArgs e)
         {
             ControlMenu menu = new ControlMenu();
