@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Drawing;
 using System.Media;
-using System.Windows.Forms;
 using codexPopuli_Arkanoid.Modelo;
 
 namespace codexPopuli_Arkanoid
@@ -28,7 +27,7 @@ namespace codexPopuli_Arkanoid
             dgvScoresTop10.DataSource = null;
             dgvScoresTop10.DataSource = ScoreDAO.GetTop10();
         }
-        
+
         //Activar sonido
         private void BttnSoundOn_Click_1(object sender, EventArgs e)
         {

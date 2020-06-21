@@ -29,11 +29,8 @@ C:\Users\ivett\Desktop\CloneProyectoPoo\codexPopuli_Arkanoid\codexPopuli_Arkanoi
 C:\Users\ivett\Desktop\CloneProyectoPoo\codexPopuli_Arkanoid\codexPopuli_Arkanoid\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\ivett\Desktop\CloneProyectoPoo\codexPopuli_Arkanoid\codexPopuli_Arkanoid\bin\Debug\System.ValueTuple.xml
 C:\Users\ivett\Desktop\CloneProyectoPoo\codexPopuli_Arkanoid\codexPopuli_Arkanoid\obj\Debug\codexPopuli_Arkanoid.exe.config
-C:\Users\ivett\Desktop\CloneProyectoPoo\codexPopuli_Arkanoid\codexPopuli_Arkanoid\obj\Debug\codexPopuli_Arkanoid.Form1.resources
 C:\Users\ivett\Desktop\CloneProyectoPoo\codexPopuli_Arkanoid\codexPopuli_Arkanoid\obj\Debug\codexPopuli_Arkanoid.csproj.CopyComplete
-C:\Users\ivett\Desktop\CloneProyectoPoo\codexPopuli_Arkanoid\codexPopuli_Arkanoid\obj\Debug\codexPopuli_Arkanoid.frmPlayer.resources
 C:\Users\ivett\Desktop\CloneProyectoPoo\codexPopuli_Arkanoid\codexPopuli_Arkanoid\obj\Debug\codexPopuli_Arkanoid.frmGame.resources
-C:\Users\ivett\Desktop\CloneProyectoPoo\codexPopuli_Arkanoid\codexPopuli_Arkanoid\obj\Debug\codexPopuli_Arkanoid.frmTop10.resources
 C:\Users\oara1\Desktop\codexPopuli_Arkanoid\codexPopuli_Arkanoid\obj\Debug\codexPopuli_Arkanoid.csprojAssemblyReference.cache
 C:\Users\oara1\Desktop\codexPopuli_Arkanoid\codexPopuli_Arkanoid\obj\Debug\codexPopuli_Arkanoid.exe.config
 C:\Users\oara1\Desktop\codexPopuli_Arkanoid\codexPopuli_Arkanoid\obj\Debug\codexPopuli_Arkanoid.Properties.Resources.resources
@@ -108,3 +105,7 @@ C:\Users\marco\Documents\uca\proPoo\codexPopuli_Arkanoid\codexPopuli_Arkanoid\ob
 C:\Users\marco\Documents\uca\proPoo\codexPopuli_Arkanoid\codexPopuli_Arkanoid\obj\Debug\codexPopuli_Arkanoid.ControlTop10.resources
 C:\Users\oara1\Desktop\codexPopuli_Arkanoid\codexPopuli_Arkanoid\obj\Debug\codexPopuli_Arkanoid.ControlPlayer.resources
 C:\Users\oara1\Desktop\codexPopuli_Arkanoid\codexPopuli_Arkanoid\obj\Debug\codexPopuli_Arkanoid.ControlTop10.resources
+C:\Users\ivett\Desktop\CloneProyectoPoo\codexPopuli_Arkanoid\codexPopuli_Arkanoid\obj\Debug\codexPopuli_Arkanoid.ControlArkanoid.resources
+C:\Users\ivett\Desktop\CloneProyectoPoo\codexPopuli_Arkanoid\codexPopuli_Arkanoid\obj\Debug\codexPopuli_Arkanoid.ControlMenu.resources
+C:\Users\ivett\Desktop\CloneProyectoPoo\codexPopuli_Arkanoid\codexPopuli_Arkanoid\obj\Debug\codexPopuli_Arkanoid.ControlPlayer.resources
+C:\Users\ivett\Desktop\CloneProyectoPoo\codexPopuli_Arkanoid\codexPopuli_Arkanoid\obj\Debug\codexPopuli_Arkanoid.ControlTop10.resources
