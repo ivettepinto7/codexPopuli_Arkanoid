@@ -89,8 +89,13 @@
     </ItemGroup>
     <ItemGroup>
         <Compile Include="Controlador\ConnectionDB.cs" />
+        <Compile Include="Controlador\EmptyNicknameException.cs" />
+        <Compile Include="Controlador\ExceededMaxCharactersException.cs" />
+        <Compile Include="Controlador\InvalidNicknameFormatException.cs" />
         <Compile Include="Controlador\PlayerDAO.cs" />
         <Compile Include="Controlador\ScoreDAO.cs" />
+        <Compile Include="Controlador\UserNotFoundException.cs" />
+        <Compile Include="Controlador\WrongKeyPressedException.cs" />
         <Compile Include="Modelo\CustomPictureBox.cs" />
         <Compile Include="Modelo\GameData.cs" />
         <Compile Include="Modelo\NewControl.cs" />

@@ -154,10 +154,24 @@ namespace codexPopuli_Arkanoid
         //Iniciar el juego con space.
         private void  ControlArkanoid_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Space)
+            try
             {
-                GameData.GameStarted = true;
-                timer1.Start();
+                if (!GameData.GameStarted)
+                {
+                    switch (e.KeyCode)
+                    {
+                        case Keys.Space:
+                            GameData.GameStarted = true;
+                            timer1.Start();
+                            break;
+                        default:
+                            throw new WrongKeyPressedException("Presione Space para iniciar el juego");
+                    }
+                }
+            }
+            catch(WrongKeyPressedException ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
         

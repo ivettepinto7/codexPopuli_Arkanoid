@@ -26,10 +26,7 @@ namespace codexPopuli_Arkanoid
             {
                 var player = PlayerDAO.GetPlayer(txtNickname.Text);
                 if (player.nickname.Equals(""))
-                {
-                    MessageBox.Show("El usuario no se encuentra registrado\n Presione agregar.",
-                        "Arkanoid", MessageBoxButtons.OK);
-                }
+                    throw new UserNotFoundException("El usuario no se encuentra registrado\n Presione agregar.");
                 else
                 {
                     MessageBox.Show($"Todo listo para jugar {player.nickname}!", "Arkanoid",
@@ -41,7 +38,7 @@ namespace codexPopuli_Arkanoid
             }
             catch (Exception exception)
             {
-                MessageBox.Show("Ha ocurrido un error "+exception.Message, 
+                MessageBox.Show(exception.Message, 
                     "Arkanoid", MessageBoxButtons.OK);
             }
         }
@@ -49,22 +46,39 @@ namespace codexPopuli_Arkanoid
         //Si el nombre no existe en la BD crear jugador
         private void BttnAddPlayer_Click(object sender, EventArgs e)
         {
-            if (txtNickname.Text.Length >= 3)
+            try
             {
-                try
+                switch (txtNickname.Text)
                 {
-                    PlayerDAO.CreatePlayer(txtNickname.Text);
+                    case string aux when aux.Length > 15:
+                        throw new ExceededMaxCharactersException("No se puede introducir un nick de mas de 15 car");
+                    case string aux when aux.Trim().Length ==0:
+                        throw new EmptyNicknameException("Necesita ingresar un Nickname");
+                    case string aux when aux.Trim().Length <3:
+                        throw new InvalidNicknameFormatException("Nickname de 3 letras o más");
+                    default:
+                        PlayerDAO.CreatePlayer(txtNickname.Text);
+                        break;
                 }
-                catch (Exception exception)
-                {
-                    MessageBox.Show("El usuario ya existe! "+exception.Message, 
-                        "Arkanoid", MessageBoxButtons.OK);
-                    throw;
-                }
+
             }
-            else
-                MessageBox.Show(
-                    "Coloque un nickname válido.","Arkanoid", MessageBoxButtons.OK);
+            catch(InvalidNicknameFormatException ex)
+            {
+                MessageBox.Show(ex.Message, 
+                    "Arkanoid", MessageBoxButtons.OK);
+            }
+            catch(ExceededMaxCharactersException ex)
+            {
+                MessageBox.Show(ex.Message, 
+                    "Arkanoid", MessageBoxButtons.OK);
+            }
+            catch(EmptyNicknameException ex)
+            {
+                MessageBox.Show(ex.Message, 
+                    "Arkanoid", MessageBoxButtons.OK);
+            }
+            
+            
         }
 
         //Activar sonido

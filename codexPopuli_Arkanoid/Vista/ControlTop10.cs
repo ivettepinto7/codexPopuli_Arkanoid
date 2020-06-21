@@ -40,5 +40,11 @@ namespace codexPopuli_Arkanoid
         {
             sound.Stop();
         }
+
+        private void btnReturn_Click(object sender, EventArgs e)
+        {
+            ControlMenu menu = new ControlMenu();
+            ((frmGame)this.Parent).ShowControl(menu);
+        }
     }
 }

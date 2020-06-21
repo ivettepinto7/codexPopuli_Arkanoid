@@ -33,6 +33,7 @@ namespace codexPopuli_Arkanoid
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnReturn = new System.Windows.Forms.Button();
             this.bttnSoundOff = new System.Windows.Forms.Button();
             this.bttnSoundOn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -58,20 +59,33 @@ namespace codexPopuli_Arkanoid
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(407, 428);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(578, 516);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnReturn);
             this.groupBox1.Controls.Add(this.bttnSoundOff);
             this.groupBox1.Controls.Add(this.bttnSoundOn);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(121, 52);
+            this.groupBox1.Size = new System.Drawing.Size(131, 71);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Sound";
+            // 
+            // btnReturn
+            // 
+            this.btnReturn.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (0)))), ((int) (((byte) (64)))));
+            this.btnReturn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReturn.Location = new System.Drawing.Point(6, 83);
+            this.btnReturn.Name = "btnReturn";
+            this.btnReturn.Size = new System.Drawing.Size(96, 28);
+            this.btnReturn.TabIndex = 2;
+            this.btnReturn.Text = "Regresar";
+            this.btnReturn.UseVisualStyleBackColor = false;
+            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
             // bttnSoundOff
             // 
@@ -102,9 +116,9 @@ namespace codexPopuli_Arkanoid
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(3, 64);
+            this.label1.Location = new System.Drawing.Point(3, 77);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(401, 64);
+            this.label1.Size = new System.Drawing.Size(572, 77);
             this.label1.TabIndex = 5;
             this.label1.Text = "TOP 10";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -114,9 +128,9 @@ namespace codexPopuli_Arkanoid
             this.dgvScoresTop10.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvScoresTop10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvScoresTop10.GridColor = System.Drawing.Color.Cyan;
-            this.dgvScoresTop10.Location = new System.Drawing.Point(3, 131);
+            this.dgvScoresTop10.Location = new System.Drawing.Point(3, 157);
             this.dgvScoresTop10.Name = "dgvScoresTop10";
-            this.dgvScoresTop10.Size = new System.Drawing.Size(401, 294);
+            this.dgvScoresTop10.Size = new System.Drawing.Size(572, 356);
             this.dgvScoresTop10.TabIndex = 6;
             // 
             // ControlTop10
@@ -126,9 +140,8 @@ namespace codexPopuli_Arkanoid
             this.BackColor = System.Drawing.Color.Red;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Controls.Add(this.tableLayoutPanel1);
-            this.DoubleBuffered = true;
             this.Name = "ControlTop10";
-            this.Size = new System.Drawing.Size(407, 428);
+            this.Size = new System.Drawing.Size(578, 516);
             this.Load += new System.EventHandler(this.ControlTop10_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
@@ -136,6 +149,7 @@ namespace codexPopuli_Arkanoid
             this.ResumeLayout(false);
         }
 
+        private System.Windows.Forms.Button btnReturn;
         private System.Windows.Forms.Button bttnSoundOff;
         private System.Windows.Forms.Button bttnSoundOn;
         private System.Windows.Forms.DataGridView dgvScoresTop10;
