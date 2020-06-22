@@ -23,7 +23,7 @@ medio de la pantalla principal.
 En el caso de no poder registrar un Nickname cabe la posibilidad que dicho Nickname ya este en uso,
 por otra parte podría estarse incumpliendo un requisito de formato para registrar el Nickname, 
 independientemente de la problemática la aplicación informará con detalle el problema.
-* Mi nombre aparece en la lista Puntajes, ¿Qué significa esto? <br>
+* Mi nombre aparece en la lista Puntajes, ¿Qué significa esto?  <br>
 En esta lista se encuentran los 10 puntajes más altos de los usuarios que han jugado.
 
 ## Trello
