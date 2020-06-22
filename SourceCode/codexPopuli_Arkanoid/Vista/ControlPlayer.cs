@@ -63,6 +63,8 @@ namespace codexPopuli_Arkanoid
                         throw new InvalidNicknameFormatException("Nickname de 3 letras o más");
                     default:
                         PlayerDAO.CreatePlayer(txtNickname.Text);
+                        MessageBox.Show("Usuario creado con éxito", 
+                            "Arkanoid", MessageBoxButtons.OK);
                         break;
                 }
 
@@ -83,6 +85,11 @@ namespace codexPopuli_Arkanoid
                 MessageBox.Show(ex.Message, 
                     "Arkanoid", MessageBoxButtons.OK);
             }
+            catch(Exception ex)
+            {
+                MessageBox.Show("El nickname ya se encuentra registrado", 
+                    "Arkanoid", MessageBoxButtons.OK);
+            }
             
             
         }
@@ -97,6 +104,12 @@ namespace codexPopuli_Arkanoid
         private void BttnSoundOff_Click(object sender, EventArgs e)
         {
             sound.Stop();
+        }
+
+        private void btnReturn_Click(object sender, EventArgs e)
+        {
+            ControlMenu menu = new ControlMenu();
+            ((frmGame)this.Parent).ShowControl(menu);
         }
     }
 }

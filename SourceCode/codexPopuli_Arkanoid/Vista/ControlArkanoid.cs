@@ -204,7 +204,7 @@ namespace codexPopuli_Arkanoid
                 CheckLife();
             }
             //Verificar si bola sale del limite superior
-            if (ball.Top < 0)
+            if (ball.Top <= scoreLifePanel.Height)
             {
                 GameData.DirY = -GameData.DirY;
             }
@@ -217,6 +217,17 @@ namespace codexPopuli_Arkanoid
             if (ball.Bounds.IntersectsWith(cpbPlayer.Bounds))
             {
                 GameData.DirY = -GameData.DirY;
+                //Si pega en el 25% izquierdo de la barra, la pelota irá a la izquierda
+                if (ball.Bounds.Right>=cpbPlayer.Bounds.Left  && ball.Bounds.Right <= 
+                    cpbPlayer.Bounds.Right - (cpbPlayer.Width*0.75))
+                {
+                    GameData.DirX = Math.Abs(GameData.DirX)*(-1);
+                }
+                //Si pega en el 25% derecho de la barra, la pelota irá a la derecha
+                else if (ball.Bounds.Left<=cpbPlayer.Bounds.Right  && ball.Bounds.Left >= 
+                    cpbPlayer.Bounds.Right - (cpbPlayer.Width*0.25)){
+                    GameData.DirX = Math.Abs(GameData.DirX);
+                }
             }
             //Verificar si bola golpea algun bloque
             for (int i = 4; i >= 0; i--)
@@ -227,19 +238,21 @@ namespace codexPopuli_Arkanoid
                     {
                         //Reducir "Vida" del bloque
                         cpb[i,j].Hits--;
+                        //Sumar puntaje si golpea bloque
+                        GameData.GameScore += 3;
+                        //Refrescar puntaje
+                        lblScore.Text = GameData.GameScore.ToString();
                         //Cambiar Sprite para nivel blindado
                         if (i ==1)
                         {
                             cpb[i,j].BackgroundImage= Image.FromFile("../../img/broken.png");
                         }
-                        //Sumar puntaje si golpea bloque
-                        GameData.GameScore += 3;
+                        
                         //Detruir bloque si ya no tiene "vidas"
                         if(cpb[i,j].Hits == 0)
                         {
                             Controls.Remove(cpb[i, j]);
                             cpb[i, j] = null;
-                            lblScore.Text = GameData.GameScore.ToString();
                             CheckGame();
                         }
                         //Cambiar sentido bola
@@ -268,6 +281,7 @@ namespace codexPopuli_Arkanoid
                 ControlMenu menu = new ControlMenu();
                 GameData.Lives = 3;
                 GameData.GameScore = 0;
+                GameData.GameStarted = false;
                 //cambiar de userControl
                 ((frmGame) this.Parent).ShowControl(menu);
             }
@@ -298,8 +312,10 @@ namespace codexPopuli_Arkanoid
                 //Reiniciar valores de juego para permitir juego nuevo
                 GameData.Lives = 3;
                 GameData.GameScore = 0;
+                GameData.GameStarted = false;
                 //Cambiar de userControl
                 ((frmGame) this.Parent).ShowControl(menu);
+                
             }
         }
     }

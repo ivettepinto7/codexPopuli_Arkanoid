@@ -37,6 +37,7 @@ namespace codexPopuli_Arkanoid
             this.bttnAddPlayer = new System.Windows.Forms.Button();
             this.bttnPlay = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnReturn = new System.Windows.Forms.Button();
             this.bttnSoundOff = new System.Windows.Forms.Button();
             this.bttnSoundOn = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
@@ -117,15 +118,28 @@ namespace codexPopuli_Arkanoid
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.btnReturn);
             this.groupBox1.Controls.Add(this.bttnSoundOff);
             this.groupBox1.Controls.Add(this.bttnSoundOn);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(115, 56);
+            this.groupBox1.Size = new System.Drawing.Size(127, 118);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Sound";
+            // 
+            // btnReturn
+            // 
+            this.btnReturn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReturn.ForeColor = System.Drawing.Color.Black;
+            this.btnReturn.Location = new System.Drawing.Point(20, 61);
+            this.btnReturn.Name = "btnReturn";
+            this.btnReturn.Size = new System.Drawing.Size(94, 33);
+            this.btnReturn.TabIndex = 2;
+            this.btnReturn.Text = "Regresar";
+            this.btnReturn.UseVisualStyleBackColor = true;
+            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
             // bttnSoundOff
             // 
@@ -165,6 +179,7 @@ namespace codexPopuli_Arkanoid
             this.ResumeLayout(false);
         }
 
+        private System.Windows.Forms.Button btnReturn;
         private System.Windows.Forms.Button bttnAddPlayer;
         private System.Windows.Forms.Button bttnPlay;
         private System.Windows.Forms.Button bttnSoundOff;

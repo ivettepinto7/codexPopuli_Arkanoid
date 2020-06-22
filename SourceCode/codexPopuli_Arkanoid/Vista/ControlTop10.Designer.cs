@@ -58,9 +58,9 @@ namespace codexPopuli_Arkanoid
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.47545F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.9161F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 69.60845F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(578, 516);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
@@ -72,7 +72,7 @@ namespace codexPopuli_Arkanoid
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(131, 71);
+            this.groupBox1.Size = new System.Drawing.Size(277, 68);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Sound";
@@ -81,7 +81,7 @@ namespace codexPopuli_Arkanoid
             // 
             this.btnReturn.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (0)))), ((int) (((byte) (64)))));
             this.btnReturn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReturn.Location = new System.Drawing.Point(6, 83);
+            this.btnReturn.Location = new System.Drawing.Point(166, 19);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(96, 28);
             this.btnReturn.TabIndex = 2;
@@ -118,9 +118,9 @@ namespace codexPopuli_Arkanoid
             this.lblTop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblTop.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lblTop.ForeColor = System.Drawing.Color.White;
-            this.lblTop.Location = new System.Drawing.Point(3, 77);
+            this.lblTop.Location = new System.Drawing.Point(3, 79);
             this.lblTop.Name = "lblTop";
-            this.lblTop.Size = new System.Drawing.Size(572, 77);
+            this.lblTop.Size = new System.Drawing.Size(572, 76);
             this.lblTop.TabIndex = 5;
             this.lblTop.Text = "TOP 10";
             this.lblTop.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -131,7 +131,7 @@ namespace codexPopuli_Arkanoid
             this.dgvScoresTop10.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
             this.dgvScoresTop10.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvScoresTop10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvScoresTop10.Location = new System.Drawing.Point(3, 157);
+            this.dgvScoresTop10.Location = new System.Drawing.Point(3, 158);
             this.dgvScoresTop10.Name = "dgvScoresTop10";
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
@@ -144,7 +144,7 @@ namespace codexPopuli_Arkanoid
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.dgvScoresTop10.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvScoresTop10.Size = new System.Drawing.Size(572, 356);
+            this.dgvScoresTop10.Size = new System.Drawing.Size(572, 355);
             this.dgvScoresTop10.TabIndex = 6;
             // 
             // ControlTop10
