@@ -1,9 +1,9 @@
 # codexPopuli
 
 ## Integrantes
-	*Ivete Carolina Pinto León		00186319
-	*Marco Vinicio Zelidón Molina		00216219
-	*Oscar Alejandro Rodríguez Abrego	00206019
+* Ivete Carolina Pinto León		00186319
+* Marco Vinicio Zelidón Molina		00216219
+* Oscar Alejandro Rodríguez Abrego	00206019
 
 ## IDE
 JetBrains Rider 2020.1.2
