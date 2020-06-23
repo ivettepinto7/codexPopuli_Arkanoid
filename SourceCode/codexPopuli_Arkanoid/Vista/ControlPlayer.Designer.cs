@@ -31,58 +31,58 @@ namespace codexPopuli_Arkanoid
         /// </summary>
         private void InitializeComponent()
         {
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.tlpPlayer = new System.Windows.Forms.TableLayoutPanel();
+            this.lblPlayer = new System.Windows.Forms.Label();
             this.txtNickname = new System.Windows.Forms.TextBox();
             this.bttnAddPlayer = new System.Windows.Forms.Button();
             this.bttnPlay = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gpbPlayer = new System.Windows.Forms.GroupBox();
             this.btnReturn = new System.Windows.Forms.Button();
             this.bttnSoundOff = new System.Windows.Forms.Button();
             this.bttnSoundOn = new System.Windows.Forms.Button();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.tlpPlayer.SuspendLayout();
+            this.gpbPlayer.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tableLayoutPanel1
+            // tlpPlayer
             // 
-            this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel1.Controls.Add(this.label1, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.txtNickname, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.bttnAddPlayer, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.bttnPlay, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.groupBox1, 0, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 450);
-            this.tableLayoutPanel1.TabIndex = 0;
+            this.tlpPlayer.BackColor = System.Drawing.Color.Transparent;
+            this.tlpPlayer.ColumnCount = 3;
+            this.tlpPlayer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpPlayer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tlpPlayer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tlpPlayer.Controls.Add(this.lblPlayer, 1, 0);
+            this.tlpPlayer.Controls.Add(this.txtNickname, 1, 1);
+            this.tlpPlayer.Controls.Add(this.bttnAddPlayer, 1, 2);
+            this.tlpPlayer.Controls.Add(this.bttnPlay, 2, 2);
+            this.tlpPlayer.Controls.Add(this.gpbPlayer, 0, 0);
+            this.tlpPlayer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpPlayer.Location = new System.Drawing.Point(0, 0);
+            this.tlpPlayer.Name = "tlpPlayer";
+            this.tlpPlayer.RowCount = 3;
+            this.tlpPlayer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
+            this.tlpPlayer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
+            this.tlpPlayer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
+            this.tlpPlayer.Size = new System.Drawing.Size(800, 450);
+            this.tlpPlayer.TabIndex = 0;
             // 
-            // label1
+            // lblPlayer
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.label1, 2);
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(163, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(634, 150);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "USUARIO";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tlpPlayer.SetColumnSpan(this.lblPlayer, 2);
+            this.lblPlayer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblPlayer.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.lblPlayer.ForeColor = System.Drawing.Color.White;
+            this.lblPlayer.Location = new System.Drawing.Point(163, 0);
+            this.lblPlayer.Name = "lblPlayer";
+            this.lblPlayer.Size = new System.Drawing.Size(634, 150);
+            this.lblPlayer.TabIndex = 0;
+            this.lblPlayer.Text = "USUARIO";
+            this.lblPlayer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtNickname
             // 
             this.txtNickname.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tableLayoutPanel1.SetColumnSpan(this.txtNickname, 2);
+            this.tlpPlayer.SetColumnSpan(this.txtNickname, 2);
             this.txtNickname.Location = new System.Drawing.Point(346, 215);
             this.txtNickname.Name = "txtNickname";
             this.txtNickname.Size = new System.Drawing.Size(268, 20);
@@ -115,19 +115,19 @@ namespace codexPopuli_Arkanoid
             this.bttnPlay.UseVisualStyleBackColor = false;
             this.bttnPlay.Click += new System.EventHandler(this.BttnPlay_Click);
             // 
-            // groupBox1
+            // gpbPlayer
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.btnReturn);
-            this.groupBox1.Controls.Add(this.bttnSoundOff);
-            this.groupBox1.Controls.Add(this.bttnSoundOn);
-            this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(3, 3);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(127, 118);
-            this.groupBox1.TabIndex = 5;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Sound";
+            this.gpbPlayer.BackColor = System.Drawing.Color.Transparent;
+            this.gpbPlayer.Controls.Add(this.btnReturn);
+            this.gpbPlayer.Controls.Add(this.bttnSoundOff);
+            this.gpbPlayer.Controls.Add(this.bttnSoundOn);
+            this.gpbPlayer.ForeColor = System.Drawing.Color.White;
+            this.gpbPlayer.Location = new System.Drawing.Point(3, 3);
+            this.gpbPlayer.Name = "gpbPlayer";
+            this.gpbPlayer.Size = new System.Drawing.Size(127, 118);
+            this.gpbPlayer.TabIndex = 5;
+            this.gpbPlayer.TabStop = false;
+            this.gpbPlayer.Text = "Sound";
             // 
             // btnReturn
             // 
@@ -170,12 +170,12 @@ namespace codexPopuli_Arkanoid
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.tlpPlayer);
             this.Name = "ControlPlayer";
             this.Size = new System.Drawing.Size(800, 450);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
+            this.tlpPlayer.ResumeLayout(false);
+            this.tlpPlayer.PerformLayout();
+            this.gpbPlayer.ResumeLayout(false);
             this.ResumeLayout(false);
         }
 
@@ -184,9 +184,9 @@ namespace codexPopuli_Arkanoid
         private System.Windows.Forms.Button bttnPlay;
         private System.Windows.Forms.Button bttnSoundOff;
         private System.Windows.Forms.Button bttnSoundOn;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.GroupBox gpbPlayer;
+        private System.Windows.Forms.Label lblPlayer;
+        private System.Windows.Forms.TableLayoutPanel tlpPlayer;
         private System.Windows.Forms.TextBox txtNickname;
 
         #endregion

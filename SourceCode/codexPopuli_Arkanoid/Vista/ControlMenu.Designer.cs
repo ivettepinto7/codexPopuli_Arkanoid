@@ -33,39 +33,39 @@ namespace codexPopuli_Arkanoid
         /// </summary>
         private void InitializeComponent()
         {
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tlpMenu = new System.Windows.Forms.TableLayoutPanel();
             this.bttnPlay = new System.Windows.Forms.Button();
             this.bttnScores = new System.Windows.Forms.Button();
             this.bttnExit = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.bttnSoundOf = new System.Windows.Forms.Button();
+            this.gpbMenu = new System.Windows.Forms.GroupBox();
+            this.bttnSoundOff = new System.Windows.Forms.Button();
             this.bttnSoundOn = new System.Windows.Forms.Button();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.tlpMenu.SuspendLayout();
+            this.gpbMenu.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tableLayoutPanel1
+            // tlpMenu
             // 
-            this.tableLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.Controls.Add(this.bttnPlay, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.bttnScores, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.bttnExit, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.groupBox1, 0, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 4;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 461);
-            this.tableLayoutPanel1.TabIndex = 0;
+            this.tlpMenu.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.tlpMenu.BackColor = System.Drawing.Color.Transparent;
+            this.tlpMenu.ColumnCount = 3;
+            this.tlpMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tlpMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tlpMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tlpMenu.Controls.Add(this.bttnPlay, 1, 1);
+            this.tlpMenu.Controls.Add(this.bttnScores, 1, 2);
+            this.tlpMenu.Controls.Add(this.bttnExit, 1, 3);
+            this.tlpMenu.Controls.Add(this.gpbMenu, 0, 0);
+            this.tlpMenu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpMenu.Location = new System.Drawing.Point(0, 0);
+            this.tlpMenu.Name = "tlpMenu";
+            this.tlpMenu.RowCount = 4;
+            this.tlpMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tlpMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tlpMenu.Size = new System.Drawing.Size(800, 461);
+            this.tlpMenu.TabIndex = 0;
             // 
             // bttnPlay
             // 
@@ -115,29 +115,29 @@ namespace codexPopuli_Arkanoid
             this.bttnExit.UseVisualStyleBackColor = false;
             this.bttnExit.Click += new System.EventHandler(this.BttnExit_Click);
             // 
-            // groupBox1
+            // gpbMenu
             // 
-            this.groupBox1.Controls.Add(this.bttnSoundOf);
-            this.groupBox1.Controls.Add(this.bttnSoundOn);
-            this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(3, 3);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(121, 52);
-            this.groupBox1.TabIndex = 3;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Sound";
+            this.gpbMenu.Controls.Add(this.bttnSoundOff);
+            this.gpbMenu.Controls.Add(this.bttnSoundOn);
+            this.gpbMenu.ForeColor = System.Drawing.Color.White;
+            this.gpbMenu.Location = new System.Drawing.Point(3, 3);
+            this.gpbMenu.Name = "gpbMenu";
+            this.gpbMenu.Size = new System.Drawing.Size(121, 52);
+            this.gpbMenu.TabIndex = 3;
+            this.gpbMenu.TabStop = false;
+            this.gpbMenu.Text = "Sound";
             // 
-            // bttnSoundOf
+            // bttnSoundOff
             // 
-            this.bttnSoundOf.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.bttnSoundOf.ForeColor = System.Drawing.Color.Black;
-            this.bttnSoundOf.Location = new System.Drawing.Point(63, 16);
-            this.bttnSoundOf.Name = "bttnSoundOf";
-            this.bttnSoundOf.Size = new System.Drawing.Size(52, 30);
-            this.bttnSoundOf.TabIndex = 1;
-            this.bttnSoundOf.Text = "OFF";
-            this.bttnSoundOf.UseVisualStyleBackColor = true;
-            this.bttnSoundOf.Click += new System.EventHandler(this.BttnSoundOff_Click);
+            this.bttnSoundOff.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.bttnSoundOff.ForeColor = System.Drawing.Color.Black;
+            this.bttnSoundOff.Location = new System.Drawing.Point(63, 16);
+            this.bttnSoundOff.Name = "bttnSoundOff";
+            this.bttnSoundOff.Size = new System.Drawing.Size(52, 30);
+            this.bttnSoundOff.TabIndex = 1;
+            this.bttnSoundOff.Text = "OFF";
+            this.bttnSoundOff.UseVisualStyleBackColor = true;
+            this.bttnSoundOff.Click += new System.EventHandler(this.BttnSoundOff_Click);
             // 
             // bttnSoundOn
             // 
@@ -156,22 +156,22 @@ namespace codexPopuli_Arkanoid
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.tlpMenu);
             this.Name = "ControlMenu";
             this.Size = new System.Drawing.Size(800, 461);
             this.Load += new System.EventHandler(this.ControlMenu_Load);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
+            this.tlpMenu.ResumeLayout(false);
+            this.gpbMenu.ResumeLayout(false);
             this.ResumeLayout(false);
         }
 
         private System.Windows.Forms.Button bttnExit;
         private System.Windows.Forms.Button bttnPlay;
         private System.Windows.Forms.Button bttnScores;
-        private System.Windows.Forms.Button bttnSoundOf;
+        private System.Windows.Forms.Button bttnSoundOff;
         private System.Windows.Forms.Button bttnSoundOn;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.GroupBox gpbMenu;
+        private System.Windows.Forms.TableLayoutPanel tlpMenu;
 
         #endregion
     }

@@ -34,14 +34,14 @@ namespace codexPopuli_Arkanoid
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gpbTop10 = new System.Windows.Forms.GroupBox();
             this.btnReturn = new System.Windows.Forms.Button();
             this.bttnSoundOff = new System.Windows.Forms.Button();
             this.bttnSoundOn = new System.Windows.Forms.Button();
             this.lblTop = new System.Windows.Forms.Label();
             this.dgvScoresTop10 = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.gpbTop10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize) (this.dgvScoresTop10)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,7 +51,7 @@ namespace codexPopuli_Arkanoid
             this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.groupBox1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.gpbTop10, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.lblTop, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.dgvScoresTop10, 0, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -64,18 +64,18 @@ namespace codexPopuli_Arkanoid
             this.tableLayoutPanel1.Size = new System.Drawing.Size(578, 516);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // groupBox1
+            // gpbTop10
             // 
-            this.groupBox1.Controls.Add(this.btnReturn);
-            this.groupBox1.Controls.Add(this.bttnSoundOff);
-            this.groupBox1.Controls.Add(this.bttnSoundOn);
-            this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(3, 3);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(277, 68);
-            this.groupBox1.TabIndex = 4;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Sound";
+            this.gpbTop10.Controls.Add(this.btnReturn);
+            this.gpbTop10.Controls.Add(this.bttnSoundOff);
+            this.gpbTop10.Controls.Add(this.bttnSoundOn);
+            this.gpbTop10.ForeColor = System.Drawing.Color.White;
+            this.gpbTop10.Location = new System.Drawing.Point(3, 3);
+            this.gpbTop10.Name = "gpbTop10";
+            this.gpbTop10.Size = new System.Drawing.Size(277, 68);
+            this.gpbTop10.TabIndex = 4;
+            this.gpbTop10.TabStop = false;
+            this.gpbTop10.Text = "Sound";
             // 
             // btnReturn
             // 
@@ -158,7 +158,7 @@ namespace codexPopuli_Arkanoid
             this.Size = new System.Drawing.Size(578, 516);
             this.Load += new System.EventHandler(this.ControlTop10_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
+            this.gpbTop10.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize) (this.dgvScoresTop10)).EndInit();
             this.ResumeLayout(false);
         }
@@ -167,7 +167,7 @@ namespace codexPopuli_Arkanoid
         private System.Windows.Forms.Button bttnSoundOff;
         private System.Windows.Forms.Button bttnSoundOn;
         private System.Windows.Forms.DataGridView dgvScoresTop10;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gpbTop10;
         private System.Windows.Forms.Label lblTop;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
 
