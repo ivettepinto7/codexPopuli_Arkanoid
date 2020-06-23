@@ -87,7 +87,7 @@ namespace codexPopuli_Arkanoid
             }
             catch(Exception ex)
             {
-                MessageBox.Show("El nickname ya se encuentra registrado", 
+                MessageBox.Show("El nickname ya se encuentra registrado "+ex.Message, 
                     "Arkanoid", MessageBoxButtons.OK);
             }
             
