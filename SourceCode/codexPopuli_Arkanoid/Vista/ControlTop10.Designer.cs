@@ -34,14 +34,14 @@ namespace codexPopuli_Arkanoid
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnReturn = new System.Windows.Forms.Button();
+            this.gpbTop = new System.Windows.Forms.GroupBox();
+            this.bttnReturn = new System.Windows.Forms.Button();
             this.bttnSoundOff = new System.Windows.Forms.Button();
             this.bttnSoundOn = new System.Windows.Forms.Button();
             this.lblTop = new System.Windows.Forms.Label();
             this.dgvScoresTop10 = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.gpbTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize) (this.dgvScoresTop10)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,7 +51,7 @@ namespace codexPopuli_Arkanoid
             this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.groupBox1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.gpbTop, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.lblTop, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.dgvScoresTop10, 0, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -64,30 +64,30 @@ namespace codexPopuli_Arkanoid
             this.tableLayoutPanel1.Size = new System.Drawing.Size(578, 516);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // groupBox1
+            // gpbTop
             // 
-            this.groupBox1.Controls.Add(this.btnReturn);
-            this.groupBox1.Controls.Add(this.bttnSoundOff);
-            this.groupBox1.Controls.Add(this.bttnSoundOn);
-            this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(3, 3);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(277, 68);
-            this.groupBox1.TabIndex = 4;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Sound";
+            this.gpbTop.Controls.Add(this.bttnReturn);
+            this.gpbTop.Controls.Add(this.bttnSoundOff);
+            this.gpbTop.Controls.Add(this.bttnSoundOn);
+            this.gpbTop.ForeColor = System.Drawing.Color.White;
+            this.gpbTop.Location = new System.Drawing.Point(3, 3);
+            this.gpbTop.Name = "gpbTop";
+            this.gpbTop.Size = new System.Drawing.Size(277, 68);
+            this.gpbTop.TabIndex = 4;
+            this.gpbTop.TabStop = false;
+            this.gpbTop.Text = "Sound";
             // 
-            // btnReturn
+            // bttnReturn
             // 
-            this.btnReturn.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (0)))), ((int) (((byte) (64)))));
-            this.btnReturn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReturn.Location = new System.Drawing.Point(166, 19);
-            this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(96, 28);
-            this.btnReturn.TabIndex = 2;
-            this.btnReturn.Text = "Regresar";
-            this.btnReturn.UseVisualStyleBackColor = false;
-            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
+            this.bttnReturn.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (0)))), ((int) (((byte) (64)))));
+            this.bttnReturn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bttnReturn.Location = new System.Drawing.Point(166, 19);
+            this.bttnReturn.Name = "bttnReturn";
+            this.bttnReturn.Size = new System.Drawing.Size(96, 28);
+            this.bttnReturn.TabIndex = 2;
+            this.bttnReturn.Text = "Regresar";
+            this.bttnReturn.UseVisualStyleBackColor = false;
+            this.bttnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
             // bttnSoundOff
             // 
@@ -158,16 +158,16 @@ namespace codexPopuli_Arkanoid
             this.Size = new System.Drawing.Size(578, 516);
             this.Load += new System.EventHandler(this.ControlTop10_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
+            this.gpbTop.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize) (this.dgvScoresTop10)).EndInit();
             this.ResumeLayout(false);
         }
 
-        private System.Windows.Forms.Button btnReturn;
+        private System.Windows.Forms.Button bttnReturn;
         private System.Windows.Forms.Button bttnSoundOff;
         private System.Windows.Forms.Button bttnSoundOn;
         private System.Windows.Forms.DataGridView dgvScoresTop10;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gpbTop;
         private System.Windows.Forms.Label lblTop;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
 
