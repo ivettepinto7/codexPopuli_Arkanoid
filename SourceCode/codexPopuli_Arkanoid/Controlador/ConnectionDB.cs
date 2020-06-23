@@ -5,7 +5,7 @@ namespace codexPopuli_Arkanoid.Modelo
     public static class ConnectionDB
     {
         private static string sConnection =
-            "Server=127.0.0.1;Port=5432;User id=postgres;Password=marcoV;Database=poopro";
+            "Server=127.0.0.1;Port=5432;User id=postgres;Password=uca;Database=proyecto";
 
         public static DataTable ExecuteQuery(string query)
         {
