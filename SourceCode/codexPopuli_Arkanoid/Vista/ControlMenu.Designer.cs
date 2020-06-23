@@ -137,7 +137,7 @@ namespace codexPopuli_Arkanoid
             this.bttnSoundOf.TabIndex = 1;
             this.bttnSoundOf.Text = "OFF";
             this.bttnSoundOf.UseVisualStyleBackColor = true;
-            this.bttnSoundOf.Click += new System.EventHandler(this.BttnSoundOf_Click);
+            this.bttnSoundOf.Click += new System.EventHandler(this.BttnSoundOff_Click);
             // 
             // bttnSoundOn
             // 

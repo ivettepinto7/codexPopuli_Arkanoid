@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace codexPopuli_Arkanoid.Modelo
 {
-    public class ScoreDAO
+    public static class ScoreDAO
     {
         public static DataTable GetTop10()
         {

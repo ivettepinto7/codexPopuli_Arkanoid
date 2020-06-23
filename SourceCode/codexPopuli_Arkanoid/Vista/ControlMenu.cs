@@ -52,7 +52,7 @@ namespace codexPopuli_Arkanoid
         }
         
         //Boton que detiene la música
-        private void BttnSoundOf_Click(object sender, EventArgs e)
+        private void BttnSoundOff_Click(object sender, EventArgs e)
         {
             sound.Stop();
         }
